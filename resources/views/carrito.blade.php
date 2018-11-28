@@ -7,6 +7,8 @@
         <div class="inner-container">
             <div class="preface"></div>
             <div class="col-main">
+
+            	@if (count($cart))
                 <div class="cart">
     				<div class="page-title title-buttons">
         				<h1>Carrito de compra</h1>
@@ -30,7 +32,7 @@
 											<thead>
 							                    <tr class="first last">
 							                        <th class="col-img" rowspan="1">Imagen</th>
-							                        <th rowspan="1">
+							                        <th rowspan="1"> 
 							                        	<span class="nobr">Productos</span>
 							                        </th>
 							                        <th rowspan="1" class="a-center">Cantidad</th>
@@ -44,75 +46,95 @@
 		                					<tfoot>
 		                    					<tr class="first last">
 		                        					<td colspan="50" class="aright last">
-		                        						<button type="submit" name="update_cart_action" value="empty_cart" title="Vaciar el Carrito" class=" grid12-4 button btn-empty" id="empty_cart_button">
+		                        						<a href="{{route('cart-trash')}}" class="grid12-4 button btn-empty" style="width: 200px;height: 40px">
 		                        							<span>
-		                        								<span>Limpiar Carro </span>
+		                        								<span>Limpiar Carro</span>
 		                        							</span>
-		                        							<!--<i aria-hidden="true" class="fa fa-angle-right"></i>-->
-		                        						</button>		                                                     
-											            <button type="submit" name="update_cart_action" value="update_qty" title="Update Cart" class="grid12-4 button btn-update btn-inline">
+		                        						</a>
+
+											            <a href="#" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px" id="update">
 											            	<span>
 											            		<span>Actualizar Carrito</span>
 											            	</span>
-											            </button>
+											            </a>
 
-											            <button type="submit" name="update_cart_action" value="update_qty" title="Update Cart" class="grid12-4 button btn-update btn-inline">
+											            <a href="{{$dominio}}/index.php" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px">
 											            	<span>
 											            		<span>Seguir comprando</span>
 											            	</span>
-											            </button>
+											            </a>
 													</td>
 		                    					</tr>
 		                					</tfoot>
+
 		                					<tbody>
+		                						@foreach($cart as $item)
 		                		                <tr class="first last odd">
     												<td>
-    													<a href="https://www.veerkamponline.com/soporte-on-stage-para-guitarra-gs7640.html" title="Soporte On-Stage Para Guitarra GS7640" class="product-image">
-    														<img src="images/productos/85ac028.jpg" alt="Soporte On-Stage Para Guitarra GS7640">
+    													<a href="" title="{{$item->descripcion}}" class="product-image">
+    														<img src="{{$dominio}}/images/productos/{{$item->articulo}}.jpg" alt="{{$item->descripcion}}">
     													</a>
     												</td>
     												<td>
             											<h2 class="product-name">
-                    										<a href="https://www.veerkamponline.com/soporte-on-stage-para-guitarra-gs7640.html">Soporte On-Stage Para Guitarra GS7640</a>
+                    										<a href="">{{$item->descripcion}}</a>
                 										</h2>
                                                     </td>
     
 													<td class="a-center pad">        
 												        <span class="cell-label">Cantidad</span>
-												    	<input type="button" value="-" class="qtyminus" field="qty-58130">
 
-												        <input name="cart[58130][qty]" fieldname="qty-58130" data-cart-item-id="85AC028" value="1" size="4" title="Cantidad" class="input-text qty" maxlength="12"  disabled>
+												    	<input type="button" value="-" class="qtyminus" field="{{$item->articulo}}">
 
-												       	<input type="button" value="+" class="qtyplus" field="qty-58130">
+												        <input name="cart[{{$item->articulo}}][qty]" fieldname="{{$item->articulo}}" id="{{$item->articulo}}" value="{{$item->quantity}}" size="4" title="Cantidad" class="input-text qty" maxlength="12"  disabled>
+
+												       	<input type="button" value="+" class="qtyplus" field="{{$item->articulo}}">
 												    </td>
 
 									                <td class="col-unit-price">
 									            		<span class="cell-label">Precio Unitario</span>
 									        			<span class="cart-price">
-									          				<span class="price">$265.00</span>
+									          				<span class="price">
+									          					${{ number_format($item->precio_u, 2)}}</span>
 									          			</span>
 									                </td>
                 
     									            <td class="col-total">
 	    												<span class="cell-label">Sub-total</span>
     													<span class="cart-price">
-	        												<span class="price">$265.00</span>
+	        												<span class="price">
+	        													${{ number_format($item->precio_u * $item->quantity,2)}}
+	        												</span>
 	        											</span>
 													</td>
         											
         											<td class="col-delete a-center last">
-        												<a href="https://www.veerkamponline.com/checkout/cart/delete/id/58130/form_key/iSFimJdpLZirdhtV/uenc/aHR0cHM6Ly93d3cudmVlcmthbXBvbmxpbmUuY29tL2NoZWNrb3V0L2NhcnQv/" title="Eliminar Artí­culo" class="btn-remove btn-remove2">Eliminar Artí­culo</a>
+        												<a href="{{route('cart-delete', $item->articulo)}}" title="Eliminar Artí­culo" class="btn-remove btn-remove2">Eliminar Artículo</a>
         											</td>
 												</tr>
+												@endforeach
 		                		            </tbody>
+
 		            					</table>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#update').click(function(){
+    			console.log("hola");
+    		});
+    	});
+    </script>
  
-	<script type="text/javascript">decorateTable('shopping-cart-table')</script>
+	<script type="text/javascript">
+		decorateTable('shopping-cart-table')
+	</script>
 		        
 		        </div>
 		    </fieldset>
 		</form>
-		<div class="grid-full alpha omega">
+
+
+<div class="grid-full alpha omega">
     
     <script type="text/javascript">
 	
@@ -140,41 +162,7 @@
 </div>
 	    <div class="grid12-4">
 	    	<div class="grid12-12">
-				<div class="grid12-12 cupon mobile-grid-half">
-	            	<form id="discount-coupon-form" action="https://www.veerkamponline.com/checkout/cart/couponPost/" method="post">
-	    				<div class="discount">
-	        				<h2>Cupón de Descuento</h2>
-	        				<div class="discount-form">
-	            				<input type="hidden" name="remove" id="remove-coupone" value="0">
-					            <div class="input-box">
-					                <input class="input-text" id="coupon_code" name="coupon_code">
-					            </div>
-	            				<div class="buttons-set">
-		                			<button type="button" title="Aplicar" class="button" onclick="discountForm.submit(false)" value="Aplicar">
-		                				<span>
-		                					<span>Aplicar</span>
-		                				</span>
-		                			</button>
-	                            </div>
-	        				</div>
-	    				</div>
-					</form>
-<script type="text/javascript">
-
-var discountForm = new VarienForm('discount-coupon-form');
-discountForm.submit = function (isRemove) {
-    if (isRemove) {
-        $('coupon_code').removeClassName('required-entry');
-        $('remove-coupone').value = "1";
-    } else {
-        $('coupon_code').addClassName('required-entry');
-        $('remove-coupone').value = "0";
-    }
-    return VarienForm.prototype.submit.bind(discountForm)();
-}
-
-</script>
-</div>		
+					
 		    	 <!-- end: cart-right-column -->
 <div class="grid12-12 envio">
 	<div class="grid12-12 mobile-grid-half"></div>		            
@@ -194,19 +182,19 @@ discountForm.submit = function (isRemove) {
     					</td>
     					<td style="" class="a-right">
         					<strong>
-        						<span class="price">$265.00</span>
+        						<span class="price">${{number_format($total,2)}}</span>
         					</strong>
     					</td>
 					</tr>
         		</tfoot>
-        		<tbody>
+        		<!--<tbody>
             		<tr>
     					<td style="" class="a-right" colspan="1">Subtotal</td>
     					<td style="" class="a-right">
         					<span class="price">$265.00</span>
         				</td>
 					</tr>
-        		</tbody>
+        		</tbody>-->
     		</table>
 		    <ul class="checkout-types">
 		    	<li>
@@ -224,6 +212,22 @@ discountForm.submit = function (isRemove) {
 	   	</div>
     </div>
 </div>
+
+
+@else
+
+	<div class="page-title">
+    	<h1>El Carrito de compra está vacío</h1>
+	</div>
+	<div class="cart-empty">
+        <p>No tiene artículos en su carrito de compras. </p>
+    	<p>Click 
+    		<a href="">aqui</a> para seguir comprando.
+    	</p>
+    </div>
+
+@endif
+
                     </div>
                     <div class="postscript"></div>
                 </div>

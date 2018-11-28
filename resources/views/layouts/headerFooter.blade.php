@@ -91,31 +91,32 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
         <div class="global-site-notice noscript">
             <div class="notice-inner">
                 <p>
-                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
-                    Debe tener activado Javascript en su navegador para utilizar la funcionalidad completa de este sitio.                </p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <br />
+                    Debe tener activado Javascript en su navegador para utilizar la funcionalidad completa de este sitio.
+                </p>
             </div>
         </div>
     </noscript>
-    <div class="page">
-        <div id="top" class="header-container header-regular sticky-header" style="height: 436px;">
+<div class="page">
+<div id="top" class="header-container header-regular sticky-header" style="height: 436px;">
 <div class="header-container2">
-<div class="header-container3">
+	<div class="header-container3">
 
-	<div class="menu-r container utilerias">
-		<div class="grid12-12">
-<ul class="links">
-<li class="first"><a href="https://www.veerkamponline.com/preguntas-frecuentes">Preguntas Frecuentes</a></li>
-<li><span>Atención 10:00 A 18:00</span></li>
-<li class="last"><span>Tel: (55) 5709-3716</span></li>
-</ul>
-</div>	</div>
+		<div class="menu-r container utilerias">
+			<div class="grid12-12">
+				<ul class="links">
+				<li class="first"><a href="{{$dominio}}/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+				<li><span>Atención 10:00 A 18:00</span></li>
+				<li class="last"><span>Tel: (55) 5709-3716</span></li>
+			</ul>
+			</div>	
+		</div>
+
 	<div class="header-primary-container">
 		<div class="header-primary header container">
 			<div class="inner-container">
-
-				
-								<div class="hp-blocks-holder skip-links--4">
-
+				<div class="hp-blocks-holder skip-links--4">
 					
 					<!-- Mobile logo -->
 					<div class="logo-wrapper--mobile">
@@ -127,12 +128,12 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 
 					<!-- Skip links -->
 
-											<a href="#header-nav" class="skip-link skip-nav">
+						<a href="#header-nav" class="skip-link skip-nav">
 							<span class="icon ic ic-menu"></span>
 							<span class="label">Menu</span>
 						</a>
 					
-											<a href="#header-search" class="skip-link skip-search">
+						<a href="#header-search" class="skip-link skip-search">
 							<span class="icon ic ic-search"></span>
 							<span class="label">Buscar</span>
 						</a>
@@ -170,7 +171,8 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 					
 											<!-- Central column -->
 						<div class="hp-block central-column grid12-6">
-																															<div class="item"><div id="search-wrapper-regular">
+<div class="item">
+	<div id="search-wrapper-regular">
     <div id="header-search" class="skip-content skip-content--style search-wrapper">
         <form id="search_mini_form" action="https://www.veerkamponline.com/catalogsearch/result/" method="get">
     <div class="form-search">
@@ -272,53 +274,308 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 					</li>
 
 
-					
-					@foreach($lineas as $line)
-					<li class="nav-item level0 nav-1 level-top first nav-item--parent mega parent">
-						<a href="{{$dominio}}/{{$line->descripcion}}/all/all" class="level-top">
-							<span>{{$line->descripcion}}</span>
-							<span class="caret">&nbsp;</span>
-						</a>
-						<span class="opener"></span>
-						<div class="nav-panel--dropdown nav-panel" style="width: 280px;">
-							<div class="nav-panel-inner">
-								<div class="nav-block nav-block--top std grid-full">
-									<div class="grid12-6 categorias">
-										<h5>CATEGORIAS</h5>
-									</div>
-									<div class="grid12-6 marcas">
-										<h5>MARCAS</h5>
-									</div>
-								</div>
 
-								<div class="nav-block--center grid12-6">
-									<ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col">
-										@foreach($categorias as $cat)
-											@if ($cat->linea === $line->id)
-												 <li class="nav-item level1 nav-1-1 first">
-													<a href="{{$dominio}}/{{$line->descripcion}}/{{$cat->descripcion}}/all">
-														<span>{{$cat->descripcion}}</span>
-													</a>
-												</li>
-											@endif
-										@endforeach
-									</ul>
-								</div>
-								<div class="nav-block nav-block--right std grid12-6">
-									<ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
-										@foreach($productos as $prod)
-											@if ($prod->idLinea === $line->id)
-												<li class="nav-item">
-													<a href="{{$dominio}}/{{$line->descripcion}}/all/{{$prod->marca}}">{{$prod->marca}}</a>
-												</li>
-											@endif
-										@endforeach
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					@endforeach	
+
+
+<li class="nav-item level0 nav-1 active current level-top first nav-item--parent mega parent item-active"><a href="{{$dominio}}/guitarras/all/all" class="level-top"><span>Guitarras</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-1-1 first">
+	<a href="{{$dominio}}/guitarras/eléctricas/all"><span>Eléctricas</span></a></li><li class="nav-item level1 nav-1-2">
+		<a href="{{$dominio}}/guitarras/electroacústicas/all"><span>Eléctroacusticas</span></a></li><li class="nav-item level1 nav-1-3">
+		<a href="{{$dominio}}/guitarras/acústicas/all"><span>Acústicas</span></a></li><li class="nav-item level1 nav-1-4">
+			<a href="{{$dominio}}/guitarras/ukuleles/all"><span>Ukuleles</span></a></li><li class="nav-item level1 nav-1-5">
+				<a href="{{$dominio}}/guitarras/folclóricas/all"><span>Folclóricas</span></a></li><li class="nav-item level1 nav-1-6">
+					<a href="{{$dominio}}/guitarras/encordaduras/all"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-1-7 last">
+						<a href="{{$dominio}}/guitarras/accesorios/all"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/ibanez">ibanez</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/cort">cort</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/musicman">musicman</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/la sevillana">la sevillana</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/caraya">caraya</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/valenciana">valenciana</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/hofner">hofner</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/guitarras/all/strunal">strunal</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-2 level-top nav-item--parent mega parent"><a href="{{$dominio}}/bajos/all/all" class="level-top"><span>Bajos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-2-1 first">
+	<a href="{{$dominio}}/bajos/eléctricos/all"><span>Eléctricos</span></a></li><li class="nav-item level1 nav-2-2"><a href="{{$dominio}}/bajos/acústicos/all"><span>Acústicos</span></a></li><li class="nav-item level1 nav-2-3">
+		<a href="{{$dominio}}/bajos/encordaduras/all"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-2-4 last">
+			<a href="{{$dominio}}/bajos/accesorios/all"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/ibanez">ibanez</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/hofner">hofner</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/cort">cort</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/sub">sub</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/musicman">musicman</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/ernie ball">ernie ball</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/la bella">la bella</a>
+	</li>
+	<li class="nav-item">
+		<a href="{{$dominio}}/bajos/all/d'addario">d'addario</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-3 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/amplificadores-efectos.html" class="level-top"><span>Amplificadores &amp; Efectos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style=""><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-3-1 first"><a href="https://www.veerkamponline.com/amplificadores-efectos/amplificadores.html"><span>Amplificadores</span></a></li><li class="nav-item level1 nav-3-2"><a href="https://www.veerkamponline.com/amplificadores-efectos/efectos.html"><span>Efectos</span></a></li><li class="nav-item level1 nav-3-3"><a href="https://www.veerkamponline.com/amplificadores-efectos/microfonos.html"><span>Micrófonos</span></a></li><li class="nav-item level1 nav-3-4 last"><a href="https://www.veerkamponline.com/amplificadores-efectos/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=55">orange</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=65">laney</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=71">ibanez</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=58">musicman</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=275">boss</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=1729">rowin </a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=82">dunlop</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=79">ernie ball</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-4 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/baterias.html" class="level-top"><span>Baterias</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style=""><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-4-1 first"><a href="https://www.veerkamponline.com/baterias/baterias.html"><span>Baterias</span></a></li><li class="nav-item level1 nav-4-2"><a href="https://www.veerkamponline.com/baterias/platillos.html"><span>Platillos</span></a></li><li class="nav-item level1 nav-4-3"><a href="https://www.veerkamponline.com/baterias/tarolas.html"><span>Tarolas</span></a></li><li class="nav-item level1 nav-4-4"><a href="https://www.veerkamponline.com/baterias/hardware.html"><span>Hardware</span></a></li><li class="nav-item level1 nav-4-5"><a href="https://www.veerkamponline.com/baterias/pedales.html"><span>Pedales</span></a></li><li class="nav-item level1 nav-4-6"><a href="https://www.veerkamponline.com/baterias/parches.html"><span>Parches</span></a></li><li class="nav-item level1 nav-4-7"><a href="https://www.veerkamponline.com/baterias/baquetas.html"><span>Baquetas</span></a></li><li class="nav-item level1 nav-4-8 last"><a href="https://www.veerkamponline.com/baterias/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=29">tama</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=50">powerbeat</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=43">sabian</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=1644">meinl</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=81">el cometa</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=60">magestic</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=77">gibraltar</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=1670">vic firth</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-5 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/percusiones.html" class="level-top"><span>Percusiones</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 606.417px; top: 20px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-5-1 first"><a href="https://www.veerkamponline.com/percusiones/congas.html"><span>Congas</span></a></li><li class="nav-item level1 nav-5-2"><a href="https://www.veerkamponline.com/percusiones/bongos.html"><span>Bongos</span></a></li><li class="nav-item level1 nav-5-3"><a href="https://www.veerkamponline.com/percusiones/latinas.html"><span>Latinas</span></a></li><li class="nav-item level1 nav-5-4"><a href="https://www.veerkamponline.com/percusiones/cajones.html"><span>Cajones</span></a></li><li class="nav-item level1 nav-5-5"><a href="https://www.veerkamponline.com/percusiones/djembes.html"><span>Djembes</span></a></li><li class="nav-item level1 nav-5-6"><a href="https://www.veerkamponline.com/percusiones/orquestales.html"><span>Orquestales</span></a></li><li class="nav-item level1 nav-5-7"><a href="https://www.veerkamponline.com/percusiones/resto-del-mundo.html"><span>Resto del Mundo</span></a></li><li class="nav-item level1 nav-5-8 last"><a href="https://www.veerkamponline.com/percusiones/parches-percusiones.html"><span>Parches Percusiones</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=76">gonbops</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=484">latin percussion</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=26">toca</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=50">powerbeat</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=1644">meinl</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=44">remo</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=81">el cometa</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=86">cpk</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-6 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/clasicos-orquestas.html" class="level-top"><span>Clásicos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 722.517px; top: 20px; display: none;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-6-1 first"><a href="https://www.veerkamponline.com/clasicos-orquestas/violines.html"><span>Violínes</span></a></li><li class="nav-item level1 nav-6-2"><a href="https://www.veerkamponline.com/clasicos-orquestas/violas.html"><span>Violas</span></a></li><li class="nav-item level1 nav-6-3"><a href="https://www.veerkamponline.com/clasicos-orquestas/cellos.html"><span>Cellos</span></a></li><li class="nav-item level1 nav-6-4"><a href="https://www.veerkamponline.com/clasicos-orquestas/contrabajos.html"><span>Contrabajos</span></a></li><li class="nav-item level1 nav-6-5"><a href="https://www.veerkamponline.com/clasicos-orquestas/acordeones.html"><span>Acordeones</span></a></li><li class="nav-item level1 nav-6-6"><a href="https://www.veerkamponline.com/clasicos-orquestas/pianos.html"><span>Pianos</span></a></li><li class="nav-item level1 nav-6-7"><a href="https://www.veerkamponline.com/clasicos-orquestas/encordaduras.html"><span>Encordaduras / Cuerdas</span></a></li><li class="nav-item level1 nav-6-8 last"><a href="https://www.veerkamponline.com/clasicos-orquestas/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=73">hofner</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=32">strunal</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=41">san antonio</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=93">amatus</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=1145">skylark</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=42">sandner</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=1683">lark</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/clasicos-orquestas.html?manufacturer=72">hohner</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-7 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/alientos.html" class="level-top"><span>Alientos </span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 813.633px; top: 20px; display: none;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-7-1 first"><a href="https://www.veerkamponline.com/alientos/saxofones.html"><span>Saxofones</span></a></li><li class="nav-item level1 nav-7-2"><a href="https://www.veerkamponline.com/alientos/armonicas.html"><span>Armonicas</span></a></li><li class="nav-item level1 nav-7-3"><a href="https://www.veerkamponline.com/alientos/clarinetes.html"><span>Clarinetes</span></a></li><li class="nav-item level1 nav-7-4"><a href="https://www.veerkamponline.com/alientos/trompetas.html"><span>Trompetas</span></a></li><li class="nav-item level1 nav-7-5"><a href="https://www.veerkamponline.com/alientos/trombones.html"><span>Trombones</span></a></li><li class="nav-item level1 nav-7-6"><a href="https://www.veerkamponline.com/alientos/flautas.html"><span>Flautas / Melodicas</span></a></li><li class="nav-item level1 nav-7-7"><a href="https://www.veerkamponline.com/alientos/orquestales.html"><span>Orquestales</span></a></li><li class="nav-item level1 nav-7-8"><a href="https://www.veerkamponline.com/alientos/boquillas.html"><span>Boquillas</span></a></li><li class="nav-item level1 nav-7-9"><a href="https://www.veerkamponline.com/alientos/ca-as.html"><span>Cañas</span></a></li><li class="nav-item level1 nav-7-10 last"><a href="https://www.veerkamponline.com/alientos/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=1572">pioneer</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=88">blessing</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=69">jupiter</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=72">hohner</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=94">amati</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=92">ancora</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=1573">bach </a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/alientos.html?manufacturer=1147">excelsior</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-8 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/dj-s.html" class="level-top"><span>Electrónica</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 906.25px; top: 20px; display: none;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-8-1 first"><a href="https://www.veerkamponline.com/dj-s/interfaces.html"><span>Interfaces</span></a></li><li class="nav-item level1 nav-8-2"><a href="https://www.veerkamponline.com/dj-s/mezcladoras.html"><span>Mezcladoras</span></a></li><li class="nav-item level1 nav-8-3"><a href="https://www.veerkamponline.com/dj-s/preamplificadores.html"><span>Preamplificadores</span></a></li><li class="nav-item level1 nav-8-4"><a href="https://www.veerkamponline.com/dj-s/monitores.html"><span>Monitores</span></a></li><li class="nav-item level1 nav-8-5"><a href="https://www.veerkamponline.com/dj-s/estacionesdetrabajo.html"><span>Estaciones de Trabajo</span></a></li><li class="nav-item level1 nav-8-6"><a href="https://www.veerkamponline.com/dj-s/tornamesas.html"><span>Tornamesas</span></a></li><li class="nav-item level1 nav-8-7"><a href="https://www.veerkamponline.com/dj-s/reproductores.html"><span>Reproductores</span></a></li><li class="nav-item level1 nav-8-8"><a href="https://www.veerkamponline.com/dj-s/controladoresmidi.html"><span>Controladores Midi</span></a></li><li class="nav-item level1 nav-8-9"><a href="https://www.veerkamponline.com/dj-s/sintetizadores.html"><span>Sintetizadores/Teclados</span></a></li><li class="nav-item level1 nav-8-10"><a href="https://www.veerkamponline.com/dj-s/audifonos.html"><span>Audífonos</span></a></li><li class="nav-item level1 nav-8-11 last"><a href="https://www.veerkamponline.com/dj-s/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=78">focusrite</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=56">novation</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1564">allen &amp; heath</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=45">reloop</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1630">roland</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1562">casio</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1835">hercules</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1731">bobino</a>
+	</li>
+ 
+</ul>
+</div></div></div></li><li class="nav-item level0 nav-9 level-top last nav-item--parent mega nav-item--only-blocks parent"><a href="https://www.veerkamponline.com/libros.html" class="level-top"><span>Libros</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<h5>Categorías</h5>
+</div>
+<div class="grid12-6 marcas">
+<h5>Marcas</h5>
+</div></div><div class="nav-block nav-block--left std grid12-6"><p></p></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/libros.html?manufacturer=75">hal leonard</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/libros.html?manufacturer="></a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/libros.html?manufacturer=95">alfred music</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/libros.html?manufacturer=1783">atril</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/libros.html?manufacturer=1835">hercules</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/libros.html?manufacturer=1312">editapsol</a>
+	</li>
+ 
+</ul>
+</div></div></div></li>
+
+
+					
+					
+
+
 									
 				</ul>
 		<div class="nav-border-bottom"></div>
