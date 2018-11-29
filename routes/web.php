@@ -33,7 +33,7 @@ Route::get('cart/trash', [
 	'uses' => 'carritoController@trash'
 ]);
 
-Route::get('cart/update/{articulo}/{quantity}', [
+Route::get('cart/update/{articulo}/{quantity?}', [
 	'as' => 'cart-update',
 	'uses' => 'carritoController@update'
 ]);

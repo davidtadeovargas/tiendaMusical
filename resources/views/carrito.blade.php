@@ -52,11 +52,11 @@
 		                        							</span>
 		                        						</a>
 
-											            <a href="#" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px" id="update">
+											            <!--<a href="#" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px" id="update">
 											            	<span>
 											            		<span>Actualizar Carrito</span>
 											            	</span>
-											            </a>
+											            </a>-->
 
 											            <a href="{{$dominio}}/index.php" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px">
 											            	<span>
@@ -86,11 +86,17 @@
 
 												    	<input type="button" value="-" class="qtyminus" field="{{$item->articulo}}">
 
-												        <input name="cart[{{$item->articulo}}][qty]" fieldname="{{$item->articulo}}" id="{{$item->articulo}}" value="{{$item->quantity}}" size="4" title="Cantidad" class="input-text qty cant" maxlength="12"  disabled>
+												        <input name="cart[{{$item->articulo}}][qty]" fieldname="{{$item->articulo}}" id="product_{{$item->articulo}}" value="{{$item->quantity}}" size="4" title="Cantidad" class="input-text qty cant" maxlength="12"  disabled>
 
 												       	<input type="button" value="+" class="qtyplus" field="{{$item->articulo}}">
 
-												       	<a href="#"><img src="{{asset('images/refresh.png')}}" style="width: 25px;margin-top: 10px;margin-right: 8px"></a>
+												       	<a href="#" 
+												       	class="update_item"
+												       	data-href="{{route('cart-update',$item->articulo)}}"
+												       	data-id="{{$item->articulo}}"
+												       	>
+												       		<img src="{{asset('images/refresh.png')}}" style="width: 25px;margin-top: 10px;margin-right: 8px">
+												       	</a>
 												    </td>
 
 									                <td class="col-unit-price">

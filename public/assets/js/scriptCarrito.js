@@ -22,15 +22,11 @@ jQuery(document).ready(function(){
 		        }
 		    });
 
-		    jQuery("#update").click(function(e) {
+		    jQuery(".update_item").click(function(e) {
 		    	e.preventDefault();
-		        var tabla2 = document.getElementById("tbody");
-				var tdsTabla2 = tabla2.getElementsByClassName("cant");
-				var i =0;
-				for (i=0; i<tdsTabla2.length; i++){
-					fieldName = jQuery(this).attr('field');		        
-		        var currentVal = parseInt(jQuery('input[fieldname='+fieldName+']').val());
-		        console.log(currentVal);
-				} 
+		        var id = jQuery(this).data('id');
+		        var href = jQuery(this).data('href');
+		        var quantity = jQuery("#product_" + id).val();
+		        window.location.href = href+"/"+quantity;
 		    });
 });
