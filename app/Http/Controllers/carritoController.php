@@ -66,7 +66,6 @@ class carritoController extends Controller
     	{
     		$total += $item->precio_u * $item->quantity;
     	}
-
     	return $total;
     }
 }

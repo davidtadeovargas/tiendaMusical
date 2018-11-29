@@ -10,7 +10,6 @@
                     <ul>
                         <li class="home" itemscope="" itemtype="" title="Ir a la página de inicio" itemprop="url">
                                 <span itemprop="title">Inicio</span>
-                            </a>
                             <span class="sep"></span>
                         </li>
                         <li class="category4">
@@ -53,19 +52,23 @@
                                     <a href="" title="Lista" class="list ic ic-list"></a>
                                 </p>  
                             </div>
-                            
-                            <div class="pager">
-                                <div class="pages">
-                                    <strong>Página:</strong>
-                                    <ol>
-                                        <li>{!! $Productos->render() !!}</li>
-                                    </ol>
-                                </div> 
-                            </div>
-                            
                         </div>
-                            
-                            
+
+<div class="productos"> 
+                        
+                            <div class="toolbar">
+                                <div class="pager">
+                                    <div class="pages">
+                                        <strong>Página:</strong>
+                                        <ol>
+                                            {!! $Productos->render() !!}
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                                       
+
                         <ul class="products-grid category-products-grid itemgrid itemgrid-adaptive itemgrid-3col single-line-name centered hover-effect equal-height">
                             @foreach($Productos as $prod)
                             <li class="item" style="height: 343.767px; padding-bottom: 62px;">
@@ -112,6 +115,8 @@
                                 </div>
                             </div>
                         </div>
+
+                    </div><!--productos-->
 
                     </div>
 

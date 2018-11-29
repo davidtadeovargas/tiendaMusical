@@ -67,7 +67,7 @@
 		                    					</tr>
 		                					</tfoot>
 
-		                					<tbody>
+		                					<tbody id="tbody">
 		                						@foreach($cart as $item)
 		                		                <tr class="first last odd">
     												<td>
@@ -86,9 +86,11 @@
 
 												    	<input type="button" value="-" class="qtyminus" field="{{$item->articulo}}">
 
-												        <input name="cart[{{$item->articulo}}][qty]" fieldname="{{$item->articulo}}" id="{{$item->articulo}}" value="{{$item->quantity}}" size="4" title="Cantidad" class="input-text qty" maxlength="12"  disabled>
+												        <input name="cart[{{$item->articulo}}][qty]" fieldname="{{$item->articulo}}" id="{{$item->articulo}}" value="{{$item->quantity}}" size="4" title="Cantidad" class="input-text qty cant" maxlength="12"  disabled>
 
 												       	<input type="button" value="+" class="qtyplus" field="{{$item->articulo}}">
+
+												       	<a href="#"><img src="{{asset('images/refresh.png')}}" style="width: 25px;margin-top: 10px;margin-right: 8px"></a>
 												    </td>
 
 									                <td class="col-unit-price">
@@ -117,13 +119,6 @@
 
 		            					</table>
 
-    <script type="text/javascript">
-    	$(document).ready(function(){
-    		$('#update').click(function(){
-    			console.log("hola");
-    		});
-    	});
-    </script>
  
 	<script type="text/javascript">
 		decorateTable('shopping-cart-table')
@@ -198,7 +193,7 @@
     		</table>
 		    <ul class="checkout-types">
 		    	<li>
-		    		<button type="button" title="Comprar" class="button btn-proceed-checkout btn-checkout" onclick="window.location='https://www.veerkamponline.com/onepage/';">
+		    		<button type="button" title="Comprar" class="button btn-proceed-checkout btn-checkout" onclick="window.location='';">
 		    			<span>
 		    				<span>Comprar</span>
 		    			</span>

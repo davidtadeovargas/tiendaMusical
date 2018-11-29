@@ -11,7 +11,6 @@
 <meta name="robots" content="INDEX,FOLLOW">
 <link rel="icon" href="https://www.veerkamponline.com/media/favicon/websites/1/favicon.png" type="image/x-icon">
 
-
 <link rel="stylesheet" type="text/css" 
 href="{{asset('assets/css/8c003f8aced30abd5d3c8b59d08ace30.css')}}" media="all">
 
@@ -74,6 +73,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 
 <script type="text/javascript" src="{{asset('assets/js/scriptLineas.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/scriptCarrito.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/script3.js')}}"></script>
 
 <style type="text/css">
 	iframe#_hjRemoteVarsFrame 
@@ -277,7 +277,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 
 
 
-<li class="nav-item level0 nav-1 active current level-top first nav-item--parent mega parent item-active"><a href="{{$dominio}}/guitarras/all/all" class="level-top"><span>Guitarras</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<li class="nav-item level0 nav-1 active current level-top first nav-item--parent mega parent item-active"><a href="{{route('lineas',['guitarras','all','all'])}}" class="level-top"><span>Guitarras</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
@@ -1266,4 +1266,7 @@ correo electrónico)                                                </span>     
 específicos del dispositivo o de uso, cookies, comportamiento e 
 interacciones) te ayudará a mejorar más rápidamente. ¿Nos das tu 
 consentimiento para hacerlo con tus visitas pasadas y futuras?&nbsp;    
-                            <a href="http://www.hotjarconsent.com/es.html" class="_hj-f5b2a1eb-9b07_more_info_link" target="_blank">                               Más información                            </a></span>                            <div class="_hj-f5b2a1eb-9b07_consent_actions">                                <button class="_hj-f5b2a1eb-9b07_btn_primary _hj-f5b2a1eb-9b07_rounded_corners" data-consent="false" type="button">                                    <i class="_hj-f5b2a1eb-9b07_icon _hj-f5b2a1eb-9b07_icon-x"></i>                                </button>                                <button class="_hj-f5b2a1eb-9b07_btn_primary _hj-f5b2a1eb-9b07_rounded_corners" data-consent="true" type="button">                                    <i class="_hj-f5b2a1eb-9b07_icon _hj-f5b2a1eb-9b07_icon-ok"></i>                                </button>                             </div>                        </div>                                                <div class="_hj-f5b2a1eb-9b07_widget_footer">                                                            <div class="_hj-f5b2a1eb-9b07_pull_left">                                    <span class="_hj-f5b2a1eb-9b07_widget_icon"></span>                                    Not using <a href="https://www.hotjar.com/feedback-polls?utm_source=client&amp;utm_medium=poll&amp;utm_campaign=insights" target="_blank">Hotjar</a> yet?                                </div>                                                        <div class="_hj-f5b2a1eb-9b07_pull_right">                                <button type="button" class="_hj-f5b2a1eb-9b07_btn _hj-f5b2a1eb-9b07_btn_disabled _hj-f5b2a1eb-9b07_rounded_corners                                     _hj-f5b2a1eb-9b07_transition _hj-f5b2a1eb-9b07_shadow">Enviado                                     <span class="_hj-f5b2a1eb-9b07_widget_icon"></span>                                </button>                            </div>                            <div class="_hj-f5b2a1eb-9b07_clear_both"></div>                        </div>                    </div>                </div></div></div></body></html>
+                            <a href="http://www.hotjarconsent.com/es.html" class="_hj-f5b2a1eb-9b07_more_info_link" target="_blank">                               Más información                            </a></span>                            <div class="_hj-f5b2a1eb-9b07_consent_actions">                                <button class="_hj-f5b2a1eb-9b07_btn_primary _hj-f5b2a1eb-9b07_rounded_corners" data-consent="false" type="button">                                    <i class="_hj-f5b2a1eb-9b07_icon _hj-f5b2a1eb-9b07_icon-x"></i>                                </button>                                <button class="_hj-f5b2a1eb-9b07_btn_primary _hj-f5b2a1eb-9b07_rounded_corners" data-consent="true" type="button">                                    <i class="_hj-f5b2a1eb-9b07_icon _hj-f5b2a1eb-9b07_icon-ok"></i>                                </button>                             </div>                        </div>                                                <div class="_hj-f5b2a1eb-9b07_widget_footer">                                                            <div class="_hj-f5b2a1eb-9b07_pull_left">                                    <span class="_hj-f5b2a1eb-9b07_widget_icon"></span>                                    Not using <a href="https://www.hotjar.com/feedback-polls?utm_source=client&amp;utm_medium=poll&amp;utm_campaign=insights" target="_blank">Hotjar</a> yet?                                </div>                                                        <div class="_hj-f5b2a1eb-9b07_pull_right">                                <button type="button" class="_hj-f5b2a1eb-9b07_btn _hj-f5b2a1eb-9b07_btn_disabled _hj-f5b2a1eb-9b07_rounded_corners                                     _hj-f5b2a1eb-9b07_transition _hj-f5b2a1eb-9b07_shadow">Enviado                                     <span class="_hj-f5b2a1eb-9b07_widget_icon"></span>                                </button>                            </div>                            <div class="_hj-f5b2a1eb-9b07_clear_both"></div>                        </div>                    </div>                </div></div></div>
+
+
+                        </body></html>

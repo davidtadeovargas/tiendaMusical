@@ -1,7 +1,13 @@
 <?php
 
 Route::get('/','indexController@index');
-Route::get('{linea}/{categoria}/{marca}','lineasResourceController@categoriasPorLinea');
+
+Route::get('{linea}/{categoria}/{marca}', [
+	'as' => 'lineas',
+	'uses' => 'lineasResourceController@categoriasPorLinea'
+]);
+
+
 
 Route::bind('articulo',function($articulo){
 	return \tiendaMusical\productos::where('articulo', $articulo)->first();
