@@ -106,7 +106,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 		<div class="menu-r container utilerias">
 			<div class="grid12-12">
 				<ul class="links">
-				<li class="first"><a href="{{$dominio}}/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+				<li class="first"><a href="#">Preguntas Frecuentes</a></li>
 				<li><span>Atención 10:00 A 18:00</span></li>
 				<li class="last"><span>Tel: (55) 5709-3716</span></li>
 			</ul>
@@ -120,7 +120,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 					
 					<!-- Mobile logo -->
 					<div class="logo-wrapper--mobile">
-						<a class="logo logo--mobile" href="{{$dominio}}/index.php" title="Veerkamp">
+						<a class="logo logo--mobile" href="{{route('home')}}" title="Veerkamp">
 							<img src="{{asset('images/logo-db0a5b.png')}}" alt="Veerkamp">
 						</a>
 					</div>
@@ -163,7 +163,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 								<div class="logo-wrapper logo-wrapper--regular">
 									<h1 class="logo logo--regular">
 										<strong>Veerkamp</strong>
-										<a href="{{$dominio}}/index.php" title="Veerkamp"><img src="{{asset('images/logo-db0a5b.png')}}" alt="Veerkamp"></a>
+										<a href="{{route('home')}}" title="Veerkamp"><img src="{{asset('images/logo-db0a5b.png')}}" alt="Veerkamp"></a>
 									</h1>
 	</div>
 </div>
@@ -216,10 +216,10 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 				<div id="header-account" class="top-links links-wrapper-separators-left skip-content skip-content--style">
 					<ul class="links">
 	<li class="first">
-		<a href="https://www.veerkamponline.com/customer/account/create/" title="Registro">Regístrate</a>
+		<a href="{{route('create-account')}}" title="Registro">Regístrate</a>
 	</li>
 	<li class="last">
-		<a href="https://www.veerkamponline.com/customer/account/login/" title="Iniciar Sesión">Iniciar Sesión</a>
+		<a href="{{route('login-account')}}" title="Iniciar Sesión">Iniciar Sesión</a>
 	</li>
 </ul>				</div>
 							</div>
@@ -268,7 +268,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 					<li id="nav-holder2" class="nav-item level0 level-top nav-holder"></li>
 					<li id="nav-holder3" class="nav-item level0 level-top nav-holder"></li>
 					<li class="nav-item nav-item--home level0 level-top active nav-item--homeicon">
-						<a class="level-top" href="{{$dominio}}/index.php">
+						<a class="level-top" href="{{route('home')}}">
 							<span class="ic ic-home"></span>
 						</a>
 					</li>
@@ -283,71 +283,71 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 <div class="grid12-6 marcas">
 <h5>Marcas</h5>
 </div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-1-1 first">
-	<a href="{{$dominio}}/guitarras/eléctricas/all"><span>Eléctricas</span></a></li><li class="nav-item level1 nav-1-2">
-		<a href="{{$dominio}}/guitarras/electroacústicas/all"><span>Eléctroacusticas</span></a></li><li class="nav-item level1 nav-1-3">
-		<a href="{{$dominio}}/guitarras/acústicas/all"><span>Acústicas</span></a></li><li class="nav-item level1 nav-1-4">
-			<a href="{{$dominio}}/guitarras/ukuleles/all"><span>Ukuleles</span></a></li><li class="nav-item level1 nav-1-5">
-				<a href="{{$dominio}}/guitarras/folclóricas/all"><span>Folclóricas</span></a></li><li class="nav-item level1 nav-1-6">
-					<a href="{{$dominio}}/guitarras/encordaduras/all"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-1-7 last">
-						<a href="{{$dominio}}/guitarras/accesorios/all"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<a href="{{route('lineas',['guitarras','eléctricas','all'])}}"><span>Eléctricas</span></a></li><li class="nav-item level1 nav-1-2">
+		<a href="{{route('lineas',['guitarras','electroacústicas','all'])}}"><span>Eléctroacusticas</span></a></li><li class="nav-item level1 nav-1-3">
+		<a href="{{route('lineas',['guitarras','acústicas','all'])}}"><span>Acústicas</span></a></li><li class="nav-item level1 nav-1-4">
+			<a href="{{route('lineas',['guitarras','ukuleles','all'])}}"><span>Ukuleles</span></a></li><li class="nav-item level1 nav-1-5">
+				<a href="{{route('lineas',['guitarras','folclóricas','all'])}}"><span>Folclóricas</span></a></li><li class="nav-item level1 nav-1-6">
+					<a href="{{route('lineas',['guitarras','encordaduras','all'])}}"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-1-7 last">
+						<a href="{{route('lineas',['guitarras','accesorios','all'])}}"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/ibanez">ibanez</a>
+		<a href="{{route('lineas',['guitarras','all','ibanez'])}}">ibanez</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/cort">cort</a>
+		<a href="{{route('lineas',['guitarras','all','cort'])}}">cort</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/musicman">musicman</a>
+		<a href="{{route('lineas',['guitarras','all','musicman'])}}">musicman</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/la sevillana">la sevillana</a>
+		<a href="{{route('lineas',['guitarras','all','sevillana'])}}">la sevillana</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/caraya">caraya</a>
+		<a href="{{route('lineas',['guitarras','all','caraya'])}}">caraya</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/valenciana">valenciana</a>
+		<a href="{{route('lineas',['guitarras','all','valenciana'])}}">valenciana</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/hofner">hofner</a>
+		<a href="{{route('lineas',['guitarras','all','hofner'])}}">hofner</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/guitarras/all/strunal">strunal</a>
+		<a href="{{route('lineas',['guitarras','all','strunal'])}}">strunal</a>
 	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-2 level-top nav-item--parent mega parent"><a href="{{$dominio}}/bajos/all/all" class="level-top"><span>Bajos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-2 level-top nav-item--parent mega parent"><a href="{{route('lineas',['bajos','all','all'])}}" class="level-top"><span>Bajos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
 <h5>Marcas</h5>
 </div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-2-1 first">
-	<a href="{{$dominio}}/bajos/eléctricos/all"><span>Eléctricos</span></a></li><li class="nav-item level1 nav-2-2"><a href="{{$dominio}}/bajos/acústicos/all"><span>Acústicos</span></a></li><li class="nav-item level1 nav-2-3">
-		<a href="{{$dominio}}/bajos/encordaduras/all"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-2-4 last">
-			<a href="{{$dominio}}/bajos/accesorios/all"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+	<a href="{{route('lineas',['bajos','eléctricos','all'])}}"><span>Eléctricos</span></a></li><li class="nav-item level1 nav-2-2"><a href="{{route('lineas',['bajos','acústicos','all'])}}"><span>Acústicos</span></a></li><li class="nav-item level1 nav-2-3">
+		<a href="{{route('lineas',['bajos','encordaduras','all'])}}"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-2-4 last">
+			<a href="{{route('lineas',['bajos','accesorios','all'])}}"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/ibanez">ibanez</a>
+		<a href="{{route('lineas',['bajos','all','ibanez'])}}">ibanez</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/hofner">hofner</a>
+		<a href="{{route('lineas',['bajos','all','hofner'])}}">hofner</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/cort">cort</a>
+		<a href="{{route('lineas',['bajos','all','cort'])}}">cort</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/sub">sub</a>
+		<a href="{{route('lineas',['bajos','all','sub'])}}">sub</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/musicman">musicman</a>
+		<a href="{{route('lineas',['bajos','all','musicman'])}}">musicman</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/ernie ball">ernie ball</a>
+		<a href="{{route('lineas',['bajos','all','ernie ball'])}}">ernie ball</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/la bella">la bella</a>
+		<a href="{{route('lineas',['bajos','all','la bella'])}}">la bella</a>
 	</li>
 	<li class="nav-item">
-		<a href="{{$dominio}}/bajos/all/d'addario">d'addario</a>
+		<a href="{{route('lineas',['bajos','all','daddario'])}}">d'addario</a>
 	</li>
  
 </ul>

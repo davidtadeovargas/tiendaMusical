@@ -2,11 +2,27 @@
 
 Route::get('/','indexController@index');
 
+Route::get('/home', [
+	'as' => 'home',
+	'uses' => 'indexController@index'
+]);
+
 Route::get('{linea}/{categoria}/{marca}', [
 	'as' => 'lineas',
 	'uses' => 'lineasResourceController@categoriasPorLinea'
 ]);
 
+// cuentas ------>
+Route::get('account/create', [
+	'as' => 'create-account',
+	'uses' => 'cuentasController@show'
+]);
+
+Route::get('account/login', [
+	'as' => 'login-account',
+	'uses' => 'cuentasController@showLogin'
+]);
+// <------ cuentas
 
 
 Route::bind('articulo',function($articulo){
