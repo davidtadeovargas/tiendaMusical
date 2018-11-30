@@ -73,12 +73,12 @@
                             @foreach($Productos as $prod)
                             <li class="item" style="height: 343.767px; padding-bottom: 62px;">
                                 <div class="product-image-wrapper" style="max-width:295px;">
-                                    <a href="" title="{{$prod->descripcion}}" class="product-image">
+                                    <a href="" title="{{$prod->nombre}}" class="product-image">
                                         <img id="product-collection-image-81" 
                                         src="{{$dominio}}/images/productos/{{$prod->articulo}}.jpg" alt="">
                                     </a>
                                 <h2 class="product-name">
-                                    <a href="" title="{{$prod->descripcion}}">{{$prod->descripcion}}</a>
+                                    <a href="" title="{{$prod->nombre}}">{{$prod->nombre}}</a>
                                 </h2>
                                 <h3 class="product-marca">{{$prod->marca}}</h3>
                                 <h3 class="product-marca">&nbsp;</h3>

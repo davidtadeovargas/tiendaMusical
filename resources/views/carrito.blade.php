@@ -71,13 +71,13 @@
 		                						@foreach($cart as $item)
 		                		                <tr class="first last odd">
     												<td>
-    													<a href="" title="{{$item->descripcion}}" class="product-image">
-    														<img src="{{$dominio}}/images/productos/{{$item->articulo}}.jpg" alt="{{$item->descripcion}}">
+    													<a href="" title="{{$item->nombre}}" class="product-image">
+    														<img src="{{$dominio}}/images/productos/{{$item->articulo}}.jpg" alt="{{$item->nombre}}">
     													</a>
     												</td>
     												<td>
             											<h2 class="product-name">
-                    										<a href="">{{$item->descripcion}}</a>
+                    										<a href="">{{$item->nombre}}</a>
                 										</h2>
                                                     </td>
     

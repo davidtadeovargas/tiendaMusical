@@ -26,8 +26,8 @@ class productos extends Model
         ->join('marcas','marcas.id','=','productos.marca')
         ->join('lineas','lineas.id','=','categorias.linea')
         ->where('lineas.linea', '=', $linea)
-        ->orderBy('productos.descripcion', 'asc')
-        ->select('productos.articulo','productos.descripcion as descripcion','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
+        ->orderBy('productos.nombre', 'asc')
+        ->select('productos.articulo','productos.nombre as nombre','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
         ->paginate($limit);
 
         return $productos;
@@ -41,8 +41,8 @@ class productos extends Model
         ->join('lineas','lineas.id','=','categorias.linea')
         ->where('lineas.linea', '=', $linea)
         ->where('categorias.categoria', '=', $categoria)
-        ->orderBy('productos.descripcion', 'asc')
-        ->select('productos.articulo','productos.descripcion as descripcion','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
+        ->orderBy('productos.nombre', 'asc')
+        ->select('productos.articulo','productos.nombre as nombre','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
         ->paginate($limit);
 
         return $productos;
@@ -56,8 +56,8 @@ class productos extends Model
         ->join('lineas','lineas.id','=','categorias.linea')
         ->where('lineas.linea', '=', $linea)
         ->where('marcas.marca', '=', $marca)
-        ->orderBy('productos.descripcion', 'asc')
-        ->select('productos.articulo','productos.descripcion as descripcion','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
+        ->orderBy('productos.nombre', 'asc')
+        ->select('productos.articulo','productos.nombre as nombre','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
         ->paginate($limit);
 
         return $productos;
@@ -75,19 +75,4 @@ class productos extends Model
 
         return $productos;
     }
-
-    /*public static function getProductosPorId()
-    {
-        $productos = DB::table('productos')
-        ->join('categorias','categorias.id','=','productos.categoria')
-        ->join('marcas','marcas.id','=','productos.marca')
-        ->join('lineas','lineas.id','=','categorias.linea')
-        ->where('lineas.linea', '=', $linea)
-        ->where('marcas.marca', '=', $marca)
-        ->orderBy('productos.descripcion', 'asc')
-        ->select('productos.articulo','productos.descripcion as descripcion','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
-        ->get();
-
-        return $productos;
-    }*/
 }
