@@ -12,18 +12,6 @@ Route::get('{linea}/{categoria}/{marca}', [
 	'uses' => 'lineasResourceController@categoriasPorLinea'
 ]);
 
-// cuentas ------>
-Route::get('account/create', [
-	'as' => 'create-account',
-	'uses' => 'cuentasController@show'
-]);
-
-Route::get('account/login', [
-	'as' => 'login-account',
-	'uses' => 'cuentasController@showLogin'
-]);
-// <------ cuentas
-
 
 Route::bind('articulo',function($articulo){
 	return \tiendaMusical\productos::where('articulo', $articulo)->first();
@@ -55,3 +43,6 @@ Route::get('cart/update/{articulo}/{quantity?}', [
 ]);
 
 // <------ carrito
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index');
