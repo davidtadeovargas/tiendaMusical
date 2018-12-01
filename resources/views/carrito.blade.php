@@ -15,7 +15,7 @@
             		</div>
             		<div class="grid-container">
     					<div class="grid12-8">
-		    				<form action="https://www.veerkamponline.com/checkout/cart/updatePost/" method="post" class="the-cart-form">
+		    				<form action="" method="post" class="the-cart-form">
 		        				<input name="form_key" type="hidden" value="iSFimJdpLZirdhtV">
 		        				<fieldset>
 		        					<div class="cart-table-wrapper">
@@ -199,11 +199,11 @@
     		</table>
 		    <ul class="checkout-types">
 		    	<li>
-		    		<button type="button" title="Comprar" class="button btn-proceed-checkout btn-checkout" onclick="window.location='';">
+		    		<a href="{{route('order-detail')}}" class="button btn-proceed-checkout btn-checkout">
 		    			<span>
 		    				<span>Comprar</span>
 		    			</span>
-		    		</button>
+		    		</a>
 				</li>
 			</ul>
 		</div>

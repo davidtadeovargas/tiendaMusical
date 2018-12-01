@@ -42,7 +42,14 @@ Route::get('cart/update/{articulo}/{quantity?}', [
 	'uses' => 'carritoController@update'
 ]);
 
+//nota: verifica antes de mostrar el detalle de la compra si hay una session iniciada gracias al middleware auth
+Route::get('order-detail', [
+	'middleware' => 'auth',
+	'as' => 'order-detail',
+	'uses' => 'carritoController@orderDetail'
+]);
 // <------ carrito
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index');

@@ -14,8 +14,10 @@
 <meta name="robots" content="INDEX,FOLLOW">
 <link rel="icon" href="https://www.veerkamponline.com/media/favicon/websites/1/favicon.png" type="image/x-icon">
 
+
 <link rel="stylesheet" type="text/css" 
 href="{{asset('assets/css/8c003f8aced30abd5d3c8b59d08ace30.css')}}" media="all">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/e989e29425c08e25cbf8670d66883d53.css')}}" media="all">
 
 <link rel="stylesheet" type="text/css" 
 href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print">
