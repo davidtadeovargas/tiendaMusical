@@ -8,13 +8,7 @@ class lineasResourceController extends Controller
 {
 
 	public function categoriasPorLinea(Request $request, $linea, $categoria, $marca)
-    {    
-        $dominio = \tiendaMusical\configuraciones::getDominio();
-        //----- < para el menu---------
-        $lineas = \tiendaMusical\lineas::getLinea();        
-        $categorias = \tiendaMusical\categorias::getCategorias();
-        $productos = \tiendaMusical\productos::getProductos();
-        //----- para el menu >---------    
+    {  
     	$Categorias = \tiendaMusical\lineas::getCategoriasPorLinea($linea);
     	if($categoria != 'all')
     	{

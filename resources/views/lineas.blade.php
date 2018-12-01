@@ -20,7 +20,7 @@
                 <div class="preface"></div>
                 <div class="col-main grid12-9 grid-col2-main no-gutter">
                     <div class="page-title category-title">
-                        <h1>{{$linea}}</h1>
+                        <h1 style="text-transform: uppercase;">{{$linea}}</h1>
                     </div>
                     <div class="category-products">
                         <div class="toolbar">
@@ -75,7 +75,7 @@
                                 <div class="product-image-wrapper" style="max-width:295px;">
                                     <a href="" title="{{$prod->nombre}}" class="product-image">
                                         <img id="product-collection-image-81" 
-                                        src="{{$dominio}}/images/productos/{{$prod->articulo}}.jpg" alt="">
+                                        src="{{asset('images/productos/'.$prod->articulo.'.jpg')}}" alt="">
                                     </a>
                                 <h2 class="product-name">
                                     <a href="" title="{{$prod->nombre}}">{{$prod->nombre}}</a>
@@ -126,14 +126,14 @@
                     <div class="block block-vertnav hide-below-768">
                         <div class="block-title">
                             <strong>
-                                <span>Categorías {{$linea}}</span>
+                                <span>Categorías para {{$linea}}</span>
                             </strong>
                         </div>
                         <div class="block-content">
                             <ul class="accordion accordion-style1 vertnav vertnav-side clearer">
                                 @foreach($Categorias as $cat)
                                 <li class="nav-item level0 nav-1 first">
-                                    <a href="{{$dominio}}/{{$linea}}/{{$cat->categoria}}/all">
+                                    <a href="/{{$linea}}/{{$cat->categoria}}/all">
                                         <span>{{$cat->categoria}}</span>
                                     </a>
                                 </li>
