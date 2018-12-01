@@ -1,4 +1,4 @@
-@extends('layouts.headerFooter')
+@extends('layouts.app')
 @section('content')
 
 <div class="main-container col2-left-layout">

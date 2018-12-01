@@ -1,4 +1,4 @@
-@extends('layouts.headerFooter')
+@extends('layouts.app')
 @section('content')
 	<h1>para pruebas</h1>
 	<h2>{{$linea}}</h2>
