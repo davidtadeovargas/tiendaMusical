@@ -58,7 +58,7 @@
 											            	</span>
 											            </a>-->
 
-											            <a href="{{$dominio}}/index.php" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px">
+											            <a href="{{route('home')}}" class="grid12-4 button btn-update btn-inline" style="width: 200px;height: 40px">
 											            	<span>
 											            		<span>Seguir comprando</span>
 											            	</span>
@@ -72,7 +72,7 @@
 		                		                <tr class="first last odd">
     												<td>
     													<a href="" title="{{$item->nombre}}" class="product-image">
-    														<img src="{{$dominio}}/images/productos/{{$item->articulo}}.jpg" alt="{{$item->nombre}}">
+    														<img src="{{asset('images/productos/'.$item->articulo.'.jpg')}}" alt="{{$item->nombre}}">
     													</a>
     												</td>
     												<td>

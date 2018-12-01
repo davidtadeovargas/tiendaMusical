@@ -15,15 +15,9 @@ class carritoController extends Controller
 
 	public function show()
 	{
-		$dominio = \tiendaMusical\configuraciones::getDominio();
-        //----- < para el menu---------
-        $lineas = \tiendaMusical\lineas::getLinea();        
-        $categorias = \tiendaMusical\categorias::getCategorias();
-        $productos = \tiendaMusical\productos::getProductos();
-        //----- para el menu >---------
 		$cart = \Session::get('cart');
 		$total = $this->total();
-		$vista = view('carrito',compact('dominio','lineas','categorias','productos','cart','total'));
+		$vista = view('carrito',compact('lineas','categorias','productos','cart','total'));
 		return $vista;
 	}
 
