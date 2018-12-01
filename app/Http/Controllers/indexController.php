@@ -13,7 +13,9 @@ class indexController extends Controller
         $categorias = \tiendaMusical\categorias::getCategorias();
         $productos = \tiendaMusical\productos::getProductos();
         //----- para el menu >---------
-        //dd($productos);
-    	return view('index',compact('lineas','categorias','marcas','productos'));
+        $nuevos = \tiendaMusical\productos::getProductosNuevos();
+        $destacados = \tiendaMusical\productos::getProductosDestacados();
+        //dd($nuevos);
+    	return view('index',compact('lineas','categorias','marcas','productos','nuevos','destacados'));
     }
 }

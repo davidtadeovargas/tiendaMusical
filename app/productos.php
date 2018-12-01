@@ -75,4 +75,33 @@ class productos extends Model
 
         return $productos;
     }
+
+
+    public static function getProductosDestacados()
+    {
+        $productos = DB::table('productos')
+        ->join('categorias','categorias.id','=','productos.categoria')
+        ->join('marcas','marcas.id','=','productos.marca')
+        ->join('lineas','lineas.id','=','categorias.linea')
+        ->where('productos.destacado', '=', true)
+        ->orderBy('productos.created_at', 'desc')
+        ->select('productos.articulo','productos.nombre as nombre','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
+        ->get();
+
+        return $productos;
+    }
+
+    public static function getProductosNuevos()
+    {
+        $productos = DB::table('productos')
+        ->join('categorias','categorias.id','=','productos.categoria')
+        ->join('marcas','marcas.id','=','productos.marca')
+        ->join('lineas','lineas.id','=','categorias.linea')
+        ->where('productos.nuevo', '=', true)
+        ->orderBy('productos.created_at', 'desc')
+        ->select('productos.articulo','productos.nombre as nombre','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
+        ->get();
+
+        return $productos;
+    }
 }

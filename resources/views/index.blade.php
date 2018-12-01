@@ -386,7 +386,7 @@
 			<img alt="img25" src="images/guitarras_acusticas_1_1.jpg">
 			<figcaption class="guitarras">
 				<h2>Guitarras</h2>			
-				<a href="guitarras.php">View more</a>
+				<a href="guitarras/all/all">View more</a>
 			</figcaption>			
 		</figure>
 	</div>
@@ -395,7 +395,7 @@
 			<img alt="img25" src="images/bajos_1_1.jpg">
 			<figcaption class="bajos">
 				<h2>Bajos</h2>			
-				<a href="">View more</a>
+				<a href="bajos/all/all">View more</a>
 			</figcaption>			
 		</figure>
 	</div>
@@ -468,6 +468,43 @@
 
 
 
+
+<div class="widget widget-new-products">
+    <div class="widget-title">
+        <h2>Destacados</h2>
+    </div>
+    <div class="widget-products">
+	    <div id="destSlider" class="grid-container">
+	    	@foreach($destacados as $dest)
+	        <div class="grid12-3  oferta">
+	            <a href="" title="{{$dest->nombre}}" class="product-image">
+	            	<img src="{{asset('images/productos/'.$dest->articulo.'.jpg')}}" alt="{{$dest->nombre}}">
+	            </a>
+	            <h3 class="product-name">
+	            	<a href="" title="{{$dest->nombre}}">{{$dest->nombre}}</a>
+	            </h3>
+	            <h3 class="product-marca">{{$dest->marca}}</h3>
+	            <div class="price-box">
+	                <!--<p class="old-price">
+	                	<span class="price-label">Precio Habitual:</span>
+	                	<span class="price" id="old-price-16-widget-new-grid">${{number_format($dest->precio,2)}}</span>
+	            	</p>-->
+					<p class="special-price">
+	                    <span class="price-label">Precio oferta</span>
+	                	<span class="price" id="product-price-16-widget-new-grid">${{number_format($dest->precio,2)}}</span>
+	                </p>
+		        </div>
+				<a class="button btn-cart" href="{{route('cart-add',$dest->articulo)}}">
+                    <span>
+                        <span>¡Lo Quiero!</span>
+                    </span>
+                </a>   
+	        </div>
+	        @endforeach                                            
+	    </div>
+    </div>
+</div>
+
 <script>
 	//<![CDATA[
     jQuery(function($) {
@@ -491,81 +528,38 @@
 			}
     });
 //]]>
-</script> <br> <div class="widget widget-new-products">
+</script>
+
+<br> 
+
+<div class="widget widget-new-products">
     <div class="widget-title">
         <h2>Nuevos</h2>
     </div>
     <div class="widget-products">
 	    <div id="newSlider" class="grid-container">
-	    	    	        	        	        	        	            <div class="grid12-3 nuevo">            	
-	                <a href="https://www.veerkamponline.com/encordadura-d-addario-para-guitarra-electrica-niquel-010-052-exl140.html" title="Encordadura D'Addario Para Guitarra Eléctrica Níquel .010 - .052 EXL140" class="product-image"><img src="images/21ag011.jpg" alt="Encordadura D'Addario Para Guitarra Eléctrica Níquel .010 - .052 EXL140"></a>
-	                <h3 class="product-name"><a href="https://www.veerkamponline.com/encordadura-d-addario-para-guitarra-electrica-niquel-010-052-exl140.html" title="Encordadura D'Addario Para Guitarra Eléctrica Níquel .010 - .052 EXL140)">Encordadura D'Addario Para Guitarra Eléctrica Níquel .010 - .052 EXL140</a></h3>
-	                <h3 class="product-marca">D'Addario</h3>
-	                
-
-                        
-    <div class="price-box">
-                                                                <span class="regular-price" id="product-price-7232-widget-new-grid">
-                                            <span class="price">$180.00</span>                                    </span>
-                        
-        </div>
-
-                                        <button type="button" title="¡Lo Quiero!" class=" button btn-cart " onclick="setLocation('https://www.veerkamponline.com/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVlcmthbXBvbmxpbmUuY29tLw,,/product/7232/form_key/hrGM0kKucLMueU64/');">¡Lo Quiero!</button>
-                    
-                 	 
-	            </div>
-             	        	        	        	            <div class="grid12-3 nuevo">            	
-	                <a href="https://www.veerkamponline.com/encordadura-d-addario-para-bajo-niquel-040-095-exl220bt.html" title="Encordadura D'Addario Para Bajo Níquel .040 - .095 EXL220BT" class="product-image"><img src="images/21ag027.jpg" alt="Encordadura D'Addario Para Bajo Níquel .040 - .095 EXL220BT"></a>
-	                <h3 class="product-name"><a href="https://www.veerkamponline.com/encordadura-d-addario-para-bajo-niquel-040-095-exl220bt.html" title="Encordadura D'Addario Para Bajo Níquel .040 - .095 EXL220BT)">Encordadura D'Addario Para Bajo Níquel .040 - .095 EXL220BT</a></h3>
-	                <h3 class="product-marca">D'Addario</h3>
-	                
-
-                        
-    <div class="price-box">
-                                                                <span class="regular-price" id="product-price-7249-widget-new-grid">
-                                            <span class="price">$604.00</span>                                    </span>
-                        
-        </div>
-
-                                        <button type="button" title="¡Lo Quiero!" class=" button btn-cart " onclick="setLocation('https://www.veerkamponline.com/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVlcmthbXBvbmxpbmUuY29tLw,,/product/7249/form_key/hrGM0kKucLMueU64/');">¡Lo Quiero!</button>
-                    
-                 	 
-	            </div>
-             	        	        	        	            <div class="grid12-3 nuevo">            	
-	                <a href="https://www.veerkamponline.com/atril-hercules-para-clarinete-ds440b.html" title="Atril Hercules Para Clarinete DS440B" class="product-image"><img src="images/45ag001.jpg" alt="Atril Hercules Para Clarinete DS440B"></a>
-	                <h3 class="product-name"><a href="https://www.veerkamponline.com/atril-hercules-para-clarinete-ds440b.html" title="Atril Hercules Para Clarinete DS440B)">Atril Hercules Para Clarinete DS440B</a></h3>
-	                <h3 class="product-marca">Hercules</h3>
-	                
-
-                        
-    <div class="price-box">
-                                                                <span class="regular-price" id="product-price-7270-widget-new-grid">
-                                            <span class="price">$528.00</span>                                    </span>
-                        
-        </div>
-
-                                        <button type="button" title="¡Lo Quiero!" class=" button btn-cart " onclick="setLocation('https://www.veerkamponline.com/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVlcmthbXBvbmxpbmUuY29tLw,,/product/7270/form_key/hrGM0kKucLMueU64/');">¡Lo Quiero!</button>
-                    
-                 	 
-	            </div>
-             	        	        	        	            <div class="grid12-3 nuevo">            	
-	                <a href="https://www.veerkamponline.com/encordadura-d-addario-para-guitarra-electrica-de-7-cuerdas-niquel-010-059-exl1107.html" title="Encordadura D'Addario Para Guitarra Eléctrica De 7 Cuerdas Níquel .010 - .059 EXL1107" class="product-image"><img src="images/21ag002.jpg" alt="Encordadura D'Addario Para Guitarra Eléctrica De 7 Cuerdas Níquel .010 - .059 EXL1107"></a>
-	                <h3 class="product-name"><a href="https://www.veerkamponline.com/encordadura-d-addario-para-guitarra-electrica-de-7-cuerdas-niquel-010-059-exl1107.html" title="Encordadura D'Addario Para Guitarra Eléctrica De 7 Cuerdas Níquel .010 - .059 EXL1107)">Encordadura D'Addario Para Guitarra Eléctrica De 7 Cuerdas Níquel .010 - .059 EXL1107</a></h3>
-	                <h3 class="product-marca">D'Addario</h3>
-	                
-
-                        
-    <div class="price-box">
-                                                                <span class="regular-price" id="product-price-7223-widget-new-grid">
-                                            <span class="price">$214.00</span>                                    </span>
-                        
-        </div>
-
-                                        <button type="button" title="¡Lo Quiero!" class=" button btn-cart " onclick="setLocation('https://www.veerkamponline.com/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVlcmthbXBvbmxpbmUuY29tLw,,/product/7223/form_key/hrGM0kKucLMueU64/');">¡Lo Quiero!</button>
-                    
-                 	 
-	            </div>
-             	        	    </div>
+	    	@foreach($nuevos as $new)
+	        <div class="grid12-3 nuevo">            	
+	            <a href="#">
+	            	<img src="{{asset('images/productos/'.$new->articulo.'.jpg')}}" alt="{{$new->nombre}}">
+	            </a>
+	                <h3 class="product-name">
+	                	<a href="#" title="{{$new->nombre}}">{{$new->nombre}}</a>
+	                </h3>
+	                <h3 class="product-marca">{{$new->marca}}</h3>
+	                <div class="price-box">
+                        <span class="regular-price" id="product-price-7232-widget-new-grid">
+                            <span class="price">${{number_format($new->precio,2)}}</span>                                    
+                        </span>
+                    </div>
+					<a class="button btn-cart" href="{{route('cart-add',$dest->articulo)}}">
+                    <span>
+                        <span>¡Lo Quiero!</span>
+                    </span>
+                </a> 
+            </div>
+            @endforeach
+         </div>
     </div>
 </div>
 <script>
