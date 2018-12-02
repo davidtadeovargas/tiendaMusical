@@ -24,9 +24,26 @@ class lineasResourceController extends Controller
     	//dd($productos);
         if($request->ajax())
         {
-            return response()->json(view('productos',compact('dominio','lineas','categorias','productos','Categorias','linea','Productos'))->render());
+            return response()->json(view('productos',compact('Categorias','linea','Productos'))->render());
         }
-        $vista = view('lineas',compact('dominio','lineas','categorias','productos','Categorias','linea','Productos'));
+        $vista = view('lineas',compact('Categorias','linea','Productos'));
+        return $vista;
+    }
+
+    public function getSearch(Request $request)
+    {
+        $Productos = \tiendaMusical\productos::getSearchProductos($request->get('q'));
+        $linea = "Resultados de búsqueda para "."'".$request->get('q')."'";
+        $Categorias = null;
+        //dd($Productos);
+        if((count($Productos)))
+        {
+            $vista = view('lineas',compact('Categorias','linea','Productos'));
+        }
+        else
+        {
+            $vista = view('errors.sin_resultados',compact('linea'));
+        }
         return $vista;
     }
 }

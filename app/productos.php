@@ -104,4 +104,23 @@ class productos extends Model
 
         return $productos;
     }
+
+    public static function getSearchProductos($search, $limit = 8)
+    {
+        if(trim($search) != "")
+        {
+            //dd($search);
+            $productos = DB::table('productos')
+            ->join('categorias','categorias.id','=','productos.categoria')
+            ->join('marcas','marcas.id','=','productos.marca')
+            ->join('lineas','lineas.id','=','categorias.linea')
+            ->where('productos.nombre','like', '%'.$search.'%')
+            ->orWhere('lineas.linea','like', '%'.$search.'%')
+            ->orWhere('marcas.marca','like', '%'.$search.'%')
+            ->orderBy('productos.nombre', 'asc')
+            ->select('productos.articulo','productos.nombre as nombre','productos.precio_u as precio', 'marcas.marca as marca','lineas.linea as linea','categorias.categoria as categoria')
+            ->paginate($limit);
+            return $productos;
+        }        
+    }
 }
