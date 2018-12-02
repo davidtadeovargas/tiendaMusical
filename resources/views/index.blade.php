@@ -3,17 +3,28 @@
 
 	<div class="block_header_banners">
 		<div class="banner container clearer">	
-						<div class="grid-container"><div class="grid12-1">&nbsp;</div>
-<div class="grid12-7">
-<div class="grid12-4 envio item-bn"><img alt="" src="images/envio-gratis.png"> <span>Envío a todo<br> México</span></div>
-<div class="grid12-4 entrega item-bn"><img alt="" src="images/entrega.png"> <span>Entrega en 72 hrs <br> hábiles</span></div>
-<div class="grid12-4 formas item-bn"><img alt="" src="images/formas-pago.png">&nbsp; &nbsp;<span>Visa, Mastercard y PayPal</span></div>
-<div class="grid12-4 formas item-bn">&nbsp;</div>
-</div>
-<div class="grid12-3 academia item-bn"><img alt="" src="images/aprende-veerkamp.png"> <span><a href="https://www.facebook.com/AcademiaVeerkamp/" target="_blank">Aprende a tocar un instrumento <br> Academia Veerkamp</a><br></span></div></div>
+			<div class="grid-container">
+				<div class="grid12-1">&nbsp;</div>
+				<div class="grid12-10">
+					<div class="grid12-4 envio item-bn">
+						<img alt="" src="images/envio-gratis.png">
+						<span>Envío a todo<br> México</span>
+					</div>
+					<div class="grid12-4 entrega item-bn">
+						<img alt="" src="images/entrega.png">
+						<span>Entrega en 72 hrs <br> hábiles</span>
+					</div>
+					<div class="grid12-4 formas item-bn">
+						<img alt="" src="images/formas-pago.png">&nbsp; &nbsp;
+						<span>Visa, Mastercard y PayPal</span>
+					</div>
+					<div class="grid12-4 formas item-bn">&nbsp;</div>
 				</div>
+				<div class="grid12-1">&nbsp;</div>
+			</div>
+		</div>
 	</div>
-	</div> <!-- end: header-container3 -->
+</div> <!-- end: header-container3 -->
 </div> <!-- end: header-container2 -->
 </div> <!-- end: header-container -->
 
