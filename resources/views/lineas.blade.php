@@ -54,7 +54,7 @@
                             </div>
                         </div>
 
-<div class="productos"> 
+                        <div class="productos"> 
                         
                             <div class="toolbar">
                                 <div class="pager">
@@ -122,6 +122,8 @@
 
                 </div>
 
+                @if($Categorias != null)
+
                 <div class="col-left sidebar grid12-3 grid-col2-sidebar no-gutter">
                     <div class="block block-vertnav hide-below-768">
                         <div class="block-title">
@@ -133,7 +135,7 @@
                             <ul class="accordion accordion-style1 vertnav vertnav-side clearer">
                                 @foreach($Categorias as $cat)
                                 <li class="nav-item level0 nav-1 first">
-                                    <a href="/{{$linea}}/{{$cat->categoria}}/all">
+                                    <a href="{{route('lineas',[$linea,$cat->categoria,'all'])}}">
                                         <span>{{$cat->categoria}}</span>
                                     </a>
                                 </li>
@@ -142,12 +144,9 @@
                         </div>
                     </div>
                     <div id="layered-nav-marker"></div>
-                    <div class="paypal-logo">
-                        <a href="#" title="Opciones Adicionales" onclick="javascript:window.open('https://www.paypal.com/mx/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','paypal','width=600,height=350,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes'); return false;">
-                            <img src="Guitarras%20Archivos/bnr_nowAccepting_150x60.gif" alt="Opciones Adicionales" title="Opciones Adicionales">
-                        </a>
-                    </div>
                 </div>
+                @endif
+
                 <div class="postscript"></div>
             </div>
         </div>
