@@ -118,7 +118,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 		<div class="menu-r container utilerias">
 			<div class="grid12-12">
 				<ul class="links">
-				<li class="first"><a href="#">Preguntas Frecuentes</a></li>
+				<li class="first"><a href="{{route('preguntas')}}">Preguntas Frecuentes</a></li>
 				<li><span>Atención 10:00 A 18:00</span></li>
 				<li class="last"><span>Tel: (55) 5709-3716</span></li>
 			</ul>
@@ -174,8 +174,8 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 							<div class="item">
 								<div class="logo-wrapper logo-wrapper--regular">
 									<h1 class="logo logo--regular">
-										<strong>Veerkamp</strong>
-										<a href="{{ url('/') }}" title="Veerkamp"><img src="{{asset('images/logo-db0a5b.png')}}" alt="Veerkamp"></a>
+										<strong>{{ config('app.name', 'Laravel') }}</strong>
+										<a href="{{ url('/') }}" title="{{ config('app.name', 'Laravel') }}"><img src="{{asset('images/logo-db0a5b.png')}}" alt="{{ config('app.name', 'Laravel') }}"></a>
 									</h1>
 	</div>
 </div>
@@ -186,20 +186,22 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 <div class="item">
 	<div id="search-wrapper-regular">
     <div id="header-search" class="skip-content skip-content--style search-wrapper">
-        <form id="search_mini_form" action="https://www.veerkamponline.com/catalogsearch/result/" method="get">
-    <div class="form-search">
-        <label for="search">Search:</label>
-        <input id="search" name="q" value="Buscar en la tienda..." class="input-text" maxlength="128" autocomplete="off" type="text">
-        <button type="submit" title="Buscar" class="button"><span><span>Buscar</span></span></button>
-        <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
-        <script type="text/javascript">
-        //<![CDATA[
-            var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Buscar en la tienda...');
-            searchForm.initAutocomplete('https://www.veerkamponline.com/catalogsearch/ajax/suggest/', 'search_autocomplete');
-        //]]>
-        </script>
-    </div>
-</form>
+        <form id="search_mini_form" action="{{route('busqueda')}}" method="GET" role="search">
+		    <div class="form-search">
+		        <label for="search">Search:</label>
+		        <input id="search" name="q" value="Buscar en la tienda..." class="input-text" maxlength="128" autocomplete="off" type="text">
+		        <button type="submit" title="Buscar" class="button">
+		        	<span>
+		        		<span>Buscar</span>
+		        	</span>
+		        </button>
+		        <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+		        <script type="text/javascript">
+		            var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Buscar en la tienda...');
+		            //searchForm.initAutocomplete('https://www.veerkamponline.com/catalogsearch/ajax/suggest/', 'search_autocomplete');
+		        </script>
+		    </div>
+		</form>
     </div>
 </div>
 </div>
@@ -260,7 +262,7 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 </div>	
 </div> <!-- end: user-menu -->
 </div></div>
-																					</div> <!-- end: right column -->
+	</div> <!-- end: right column -->
 										
 				</div> <!-- end: hp-blocks-holder -->
 
@@ -866,51 +868,56 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
 <div class="footer-primary footer container">
 <div class="inner-container">
 <div class="clearer">
-<div class="grid12-3">	<div class="std"><div class="collapsible mobile-collapsible">
-<h6 class="block-title heading">Acerca de Veerkamp</h6>
+
+
+<div class="grid12-4">	<div class="std"><div class="collapsible mobile-collapsible">
+<h6 class="block-title heading">Acerca de {{ config('app.name', 'Laravel') }}</h6>
 <div class="block-content">
 <ul class="bullet">
-<li><a href="https://www.veerkamponline.com/quienes-somos/">¿Quiénes somos?</a></li>
-<li><a href="https://www.veerkamponline.com/tiendas-veerkamp/">Tiendas Veerkamp</a></li>
-<li><a href="https://www.veerkamponline.com/academia-veerkamp/">Academias</a></li>
-<li><a href="http://www.casaveerkamp.net/" target="_blank">Manuales</a></li>
-<li><a href="https://www.veerkamponline.com/terminos-uso/">Términos de Uso</a></li>
-<li><a href="https://www.veerkamponline.com/terminos-condiciones/">Términos y Condiciones</a></li>
-<li><a href="https://www.veerkamponline.com/cupones-veerkamp-online/">Promociones y Cupones Veerkamp Online</a></li>
-<li><a href="https://www.veerkamponline.com/blog/">Blog</a></li>
+<li><a href="{{route('about')}}">¿Quiénes somos?</a></li>
+<li><a href="{{route('terminos-uso')}}">Términos de Uso</a></li>
+<li><a href="{{route('terminos-condiciones')}}">Términos y Condiciones</a></li>
 </ul>
 </div>
-</div></div></div><div class="grid12-3">	<div class="std"><div class="collapsible mobile-collapsible">
+</div></div></div>
+
+
+<div class="grid12-4">	<div class="std"><div class="collapsible mobile-collapsible">
 <h6 class="block-title heading">Servicio al Cliente</h6>
 <div class="block-content">
 <ul class="bullet">
-<li><a href="https://www.veerkamponline.com/preguntas-frecuentes/">Preguntas Frecuentes</a></li>
-<li><a href="https://www.veerkamponline.com/contacto/">Contacto</a></li>
-<li><a href="https://www.veerkamponline.com/formas-pago/">Formas de Pago</a></li>
-<li><a href="https://www.veerkamponline.com/aviso-privacidad/">Aviso de Privacidad</a></li>
-<li><a href="https://www.veerkamponline.com/politicas-envios-devoluciones-cancelaciones/">Políticas de Envío, Devolución y Cancelación</a></li>
-<li><a href="https://www.veerkamponline.com/customer/account/login/">Tu Cuenta</a></li>
-<li><a href="https://www.veerkamponline.com/como-comprar/">¿Cómo comprar en Veerkamp?</a></li>
-<li><a title="Facturación Veerkamp Mesones" href="http://apps.rfacil.com/VeerkampMesones/Public/IniciaAutoFacturacion.aspx">Facturación Veerkamp Mesones</a></li>
+<li><a href="{{route('preguntas')}}">Preguntas Frecuentes</a></li>
+<li><a href="{{route('contacto')}}">Contacto</a></li>
+<li><a href="{{route('forma_pago')}}">Formas de Pago</a></li>
+<li><a href="{{route('aviso_privacidad')}}">Aviso de Privacidad</a></li>
+<li><a href="{{route('politicas')}}">Políticas de Envío, Devolución y Cancelación</a></li>
+<li><a href="#">Tu Cuenta</a></li>
+<li><a href="{{route('forma_compra')}}">¿Cómo comprar en {{ config('app.name', 'Laravel') }}?</a></li>
 </ul>
 </div>
-</div></div></div><div class="grid12-3">	<div class="std"><div class="collapsible mobile-collapsible">
+</div></div></div>
+
+<div class="grid12-4">	<div class="std"><div class="collapsible mobile-collapsible">
 <h6 class="block-title heading">Siguenos</h6>
 <div class="block-content redes">
-		<a target="_blank" href="https://twitter.com/veerkamp" class="first">
+		<a target="_blank" href="" class="first">
 		<span class="ib ib-hover ic ic-lg ic-twitter"></span> Twitter
 	</a>
-	<a target="_blank" href="https://www.facebook.com/CasaVeerkamp">
+	<a target="_blank" href="">
 		<span class="ib ib-hover ic ic-lg ic-facebook"></span> Facebook
 	</a>
-	<a target="_blank" href="https://www.instagram.com/casaveerkamp/">
+	<a target="_blank" href="">
 		<span class="ib ib-hover ic ic-lg ic-instagram"></span> Instagram
 	</a>
-	<a target="_blank" href="https://www.youtube.com/user/MesonesVeerkamp">
+	<a target="_blank" href="">
 		<span class="ib ib-hover ic ic-lg ic-youtube"></span> Youtube
 	</a>
 	</div>
-</div></div></div><div class="grid12-3">	<div class="std"><div id="news_block" class="collapsible mobile-collapsible">
+</div></div></div>
+
+<!--<div class="grid12-3">	
+	<div class="std">
+		<div id="news_block" class="collapsible mobile-collapsible">
 <h6 class="block-title heading">Regístrate en nuestro newsletter*</h6>
 <div class="block-content block-exct"><div class="grid block-exct">
 	<div id="subscribe-forms" class="clearer">
@@ -928,15 +935,16 @@ href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print
     </form>
 </div>
 <script type="text/javascript">
-//<![CDATA[
     var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
     new Varien.searchForm('newsletter-validate-detail', 'newsletter', 'Ingresa tu email');
-//]]>
 </script>
 </div>	
 <link media="all" href="{{asset('assets/css/jquery.css')}}" rel="stylesheet" type="text/css">
 	 <span class="mensaje"> </span></div>
-</div></div></div>				</div> <!-- end: footer-primary section -->
+</div></div></div>	-->			
+
+
+</div> <!-- end: footer-primary section -->
 								
 								<div class="footer-primary-bottom grid12-12">
 					<div class="footer-primary-bottom-spacing clearer">
