@@ -72,7 +72,7 @@ Route::get('cart/update/{articulo}/{quantity?}', [
 ]);
 
 //nota: verifica antes de mostrar el detalle de la compra si hay una session iniciada gracias al middleware auth
-Route::get('order-detail', [
+Route::get('cart/order-detail', [
 	'middleware' => 'auth',
 	'as' => 'order-detail',
 	'uses' => 'carritoController@orderDetail'

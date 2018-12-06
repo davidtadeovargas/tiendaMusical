@@ -28,7 +28,7 @@
                 <li class="success-msg">
                     <ul>
                         <li>
-                            <span>Gracias por registrarte con Veerkamp.</span>
+                            <span>Gracias por registrarte con.</span>
                         </li>
                     </ul>
                 </li>
