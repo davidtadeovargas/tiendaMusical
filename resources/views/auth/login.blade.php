@@ -80,7 +80,7 @@
         <div class="col2-set">
             <div class="col-1 new-users">
                 <div class="buttons-set">
-                    <a href="{{ url('/register') }}" class="button">
+                    <a href="{{route('account-register')}}" class="button">
                         <span>
                             <span>Crear una Cuenta</span>
                         </span>

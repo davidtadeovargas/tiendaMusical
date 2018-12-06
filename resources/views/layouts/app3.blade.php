@@ -4,44 +4,26 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <title>{{ config('app.name', 'Laravel') }}</title>
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="Instrumentos Musicales y Accesorios Veerkamp
-">
+<meta name="description" content="Instrumentos Musicales y Accesorios">
 <meta name="keywords" content="">
 <meta name="robots" content="INDEX,FOLLOW">
 <link rel="icon" href="https://www.veerkamponline.com/media/favicon/websites/1/favicon.png" type="image/x-icon">
-<link rel="shortcut icon" href="https://www.veerkamponline.com/media/favicon/websites/1/favicon.png" type="image/x-icon">
 
-<!--[if lt IE 7]>
-<script type="text/javascript">
-//<![CDATA[
-    var BLANK_URL = 'https://www.veerkamponline.com/js/blank.html';
-    var BLANK_IMG = 'https://www.veerkamponline.com/js/spacer.gif';
-//]]>
-</script>
-<![endif]-->
 
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/8c003f8aced30abd5d3c8b59d08ace30.css')}}" media="all">
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print">
-<script async="" src="{{asset('assets/js/analytics.js')}}"></script><script type="text/javascript" src="{{asset('assets/js/4141af9d9b5bf9a9bacf16dd31fa5a71.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/5e6fd4e0a14d56b5828c65c238cce529.js')}}"></script>
-<!--[if IE]>
-<link rel="stylesheet" type="text/css" href="https://www.veerkamponline.com/media/css_secure/72830910fdbfc2ac96415f693398e191.css" media="all" />
-<![endif]-->
-<!--[if lt IE 7]>
-<script type="text/javascript" src="https://www.veerkamponline.com/media/js/d58c98f35b548b6c3160a029cd8beba0.js"></script>
-<![endif]-->
-<!--[if lte IE 7]>
-<link rel="stylesheet" type="text/css" href="https://www.veerkamponline.com/media/css_secure/e92a86e455b07d2f00c04e71629cdc69.css" media="all" />
-<![endif]-->
-<!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" href="https://www.veerkamponline.com/media/css_secure/7d060a78b75ea637f3c46b9cb82c3e74.css" media="all" />
-<![endif]-->
+<link rel="stylesheet" type="text/css" 
+href="{{asset('assets/css/8c003f8aced30abd5d3c8b59d08ace30.css')}}" media="all">
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/e989e29425c08e25cbf8670d66883d53.css')}}" media="all">
+
+<link rel="stylesheet" type="text/css" 
+href="{{asset('assets/css/9640d03eb43eadec981bb0eb89b282fc.css')}}" media="print">
+
+<script async="" src="{{asset('assets/js/analytics.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/4141af9d9b5bf9a9bacf16dd31fa5a71.js')}}"></script>
 
 <!-- Scripts -->
     <script>
@@ -50,42 +32,41 @@
         ]); ?>
     </script>
 
-
 <script type="text/javascript">
-
-Mage.Cookies.path     = '/';
-Mage.Cookies.domain   = '.veerkamponline.com';
-
+	Mage.Cookies.path     = '/';
+	Mage.Cookies.domain   = '.veerkamponline.com';
 </script>
 
 <script type="text/javascript">
-//<![CDATA[
-optionalZipCountries = ["MX"];
-//]]>
+	optionalZipCountries = ["MX"];
 </script>
-            <!-- BEGIN GOOGLE UNIVERSAL ANALYTICS CODE -->
-        <script type="text/javascript">
-        //<![CDATA[
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
 
-            
-ga('create', 'UA-53805306-1', 'auto');
+<!-- BEGIN GOOGLE UNIVERSAL ANALYTICS CODE -->
+<script type="text/javascript">
+        
+    (function(i,s,o,g,r,a,m)
+    	{
+    		i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+    		{
+            	(i[r].q=i[r].q||[]).push(arguments)
+        	},
+        	i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];
+            a.async=1;
+            a.src=g;
+            m.parentNode.insertBefore(a,m)
+            })
+    		(window,document,'script','{{asset("assets/js/analytics.js")}}','ga');
 
-ga('send', 'pageview');
-            
-        //]]>
-        </script>
+	ga('create', 'UA-53805306-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
         <!-- END GOOGLE UNIVERSAL ANALYTICS CODE -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/css.css')}}" media="all"> 
+<link rel="stylesheet" type="text/css" href="{{asset('assets/css/css.css')}}" media="all"> 
 <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.css')}}" media="all">
 
-<style type="text/css">
-									</style><script type="text/javascript">//<![CDATA[
-        var Translator = new Translate({"Please select an option.":"Por favor seleccione una opci\u00f3n.","This is a required field.":"Este es un campo obligatorio.","Please enter a valid number in this field.":"Por favor, introduzca un n\u00famero v\u00e1lido en este campo.","Please use numbers only in this field. Please avoid spaces or other characters such as dots or commas.":"En este campo s\u00f3lo se pueden escribir n\u00fameros. Evite los espacios en blanco u otros caracteres, como los puntos o las comas, por ejemplo.","Please use letters only (a-z or A-Z) in this field.":"Usar \u00fanicamente letras (a-z o A-Z) en este campo por favor.","Please use only letters (a-z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Por favor, use solo letras (a-z), n\u00fameros (0-9) o gui\u00f3n bajo (_) en este campo, el primer car\u00e1cter debe ser una letra.","Please use only letters (a-z or A-Z) or numbers (0-9) only in this field. No spaces or other characters are allowed.":"Por favor, utilice solo letras (a-z o A-Z) o n\u00fameros (0-9) solo en este campo. No est\u00e1n permitidos los espacios u otros caracteres.","Please enter a valid phone number. For example (123) 456-7890 or 123-456-7890.":"Por favor, introduzca un n\u00famero de tel\u00e9fono v\u00e1lido. Por ejemplo (123) 456-7890 o 123-456-7890.","Please enter a valid date.":"Por favor, introduzca una fecha v\u00e1lida.","The From Date value should be less than or equal to the To Date value.":"El valor Desde la fecha debe ser inferior o igual al valor Hasta la fecha.","Please enter a valid email address. For example johndoe@domain.com.":"Por favor, introduzca un Email v\u00e1lido. Por ejemplo juanperez@dominio.com.","Please enter 6 or more characters. Leading or trailing spaces will be ignored.":"Por favor, introduzca 6 o m\u00e1s caracteres. Los espacios entre caracteres ser\u00e1n ignorados.","Please make sure your passwords match.":"Por favor, aseg\u00farese de que sus contrase\u00f1as coinciden.","Please enter a valid URL. Protocol is required (http:\/\/, https:\/\/ or ftp:\/\/)":"Por favor, introduzca una URL v\u00e1lida. Es necesario el protocolo (http:\/\/, https:\/\/ or ftp:\/\/)","Please enter a valid URL. For example http:\/\/www.example.com or www.example.com":"Por favor, introduzca una URL v\u00e1lida. Por ejemplo http:\/\/www.example.com o www.example.com","Please enter a valid social security number. For example 123-45-6789.":"Por favor, introduzca un n\u00famero de seguro social v\u00e1lido. Por ejemplo 123-45-6789.","Please enter a valid zip code. For example 90602 or 90602-1234.":"Por favor, introduzca un c\u00f3digo postal v\u00e1lido. Por ejemplo 90602 o 90602-1234.","Please enter a valid zip code.":"Por favor, introduzca un c\u00f3digo postal v\u00e1lido.","Please use this date format: dd\/mm\/yyyy. For example 17\/03\/2006 for the 17th of March, 2006.":"Por favor, use este formato de fecha: dd\/mm\/aaaa. Por ejemplo 17\/03\/2006 para el 17 de marzo de 2006.","Please enter a valid $ amount. For example $100.00.":"Por favor, introduzca una cantidad en $ v\u00e1lida. Por ejemplo: $ 100.00.","Please select one of the above options.":"Por favor, elija una de las opciones de arriba.","Please select one of the options.":"Por favor, elija una de las opciones.","Please select State\/Province.":"Por favor, elija Estado\/Provincia.","Please enter a number greater than 0 in this field.":"Por favor, introduzca un n\u00famero superior a 0 en este campo.","Please enter a valid credit card number.":"Por favor, introduzca un n\u00famero de tarjeta de cr\u00e9dito v\u00e1lido.","Credit card number does not match credit card type.":"Kreditkartennummer entspricht nicht dem Kreditkartentyp.","Please enter issue number or start date for switch\/solo card type.":"Bitte geben Sie Ihre Ausgabenummer oder das Erstellungsdatum Ihrer EC-\/Debitkarte an.","Please wait, loading...":" Por favor, espere, cargando ...","Complete":"Completo","Add Products":"A\u00f1adir Productos","Please choose to register or to checkout as a guest":"Elije si quieres registrarte o pagar como invitado!","Please specify shipping method.":"Especifique m\u00e9todo de env\u00ed\u00ado por favor.","Please specify payment method.":"Especifique m\u00e9todo de pago por favor.","Insert Widget...":"Insertar Widget\u2026","Add to Cart":"Agregar","In Stock":"en stock ","Out of Stock":"Agotado"});
-        //]]></script><!-- Hotjar Tracking Code for http://veerkamponline.com/ -->
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -95,95 +76,76 @@ ga('send', 'pageview');
         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
         a.appendChild(r);
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-</script><script async="" src="{{asset('assets/js/hotjar-416823.js')}}"></script>
+</script>
 
+<script async="" src="{{asset('assets/js/hotjar-416823.js')}}"></script>
 
 <link href="{{asset('assets/css/css_002.css')}}" rel="stylesheet" type="text/css">
-<script async="" src="{{asset('assets/css/modules-53580245dd2130370f2ced95f7dffc32.js')}}"></script>
+<script async="" src="{{asset('assets/js/modules-1fba13cbb2ccc31138fe484993444853.js')}}"></script>
 
-<!--<script type="text/javascript" src="{{asset('assets/js/scriptLineas.js')}}"></script>-->
+<script type="text/javascript" src="{{asset('assets/js/scriptLineas.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/scriptCarrito.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/script3.js')}}"></script>
 
-<style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+<style type="text/css">
+	iframe#_hjRemoteVarsFrame 
+	{
+		display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;
+	}
+</style>
 
 </head>
-<body class=" cms-index-index responsive cms-inicio " itemscope="" itemtype="">
+
+<body class=" cms-index-index responsive cms-inicio " itemscope="" itemtype="http://schema.org/WebPage">
 <div id="root-wrapper">
 <div class="wrapper">
         <noscript>
         <div class="global-site-notice noscript">
             <div class="notice-inner">
                 <p>
-                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
-                    Debe tener activado Javascript en su navegador para utilizar la funcionalidad completa de este sitio.                </p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <br />
+                    Debe tener activado Javascript en su navegador para utilizar la funcionalidad completa de este sitio.
+                </p>
             </div>
         </div>
     </noscript>
-    <div class="page">
-<div id="top" class="header-container header-regular" style="">
+<div class="page">
+<div id="top" class="header-container header-regular sticky-header" style="height: 436px;">
 <div class="header-container2">
-<div class="header-container3">
+	<div class="header-container3">
 
-	<div class="header-top-container superbanner">
-		<div class="header-top header container clearer">
-			<div class="inner-container">
-				<div class="item">
-									</div>
-				<div class="left-column" style="display: none">
+		<div class="menu-r container utilerias">
+			<div class="grid12-12">
+				<ul class="links">
+				<li class="first"><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+				<li><span>Atención 10:00 A 18:00</span></li>
+				<li class="last"><span>Tel: (55) 5709-3716</span></li>
+			</ul>
+			</div>	
+		</div>
 
-					
-					
-															<div class="item item-left hide-below-960">
-						<p class="welcome-msg"></p>
-					</div>
-
-				</div> <!-- end: left column -->
-
-				<div class="right-column" style="display: none">
-
-					
-										
-										<div id="currency-switcher-wrapper-regular" class="item item-right"></div>
-					<div id="lang-switcher-wrapper-regular" class="item item-right"></div>
-					
-				</div> <!-- end: right column -->
-
-			</div> <!-- end: inner-container -->
-		</div> <!-- end: header-top -->
-	</div> <!-- end: header-top-container -->
-	<div class="menu-r container utilerias">
-		<div class="grid12-12">
-<ul class="links">
-<li class="first"><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
-<li><span>Atención 10:00 A 18:00</span></li>
-<li class="last"><span>Tel: (55) 5709-3716</span></li>
-</ul>
-</div>	</div>
 	<div class="header-primary-container">
 		<div class="header-primary header container">
 			<div class="inner-container">
-
-				
-								<div class="hp-blocks-holder skip-links--4">
-
+				<div class="hp-blocks-holder skip-links--4">
 					
 					<!-- Mobile logo -->
 					<div class="logo-wrapper--mobile">
-						<a class="logo logo--mobile" href="{{route('home')}}" title="Veerkamp">
-							<img src="{{asset('images/logo-db0a5b.png')}}" alt="Veerkamp">
+						<a class="logo logo--mobile" href="{{route('home')}}" title="">
+							<img src="{{asset('images/logo-db0a5b.png')}}" alt="">
 						</a>
 					</div>
 					<div class="clearer after-mobile-logo"></div>
 
 					<!-- Skip links -->
 
-											<a href="#header-nav" class="skip-link skip-nav">
+						<a href="#header-nav" class="skip-link skip-nav">
 							<span class="icon ic ic-menu"></span>
 							<span class="label">Menu</span>
 						</a>
 					
-											<a href="#header-search" class="skip-link skip-search">
+						<a href="#header-search" class="skip-link skip-search">
 							<span class="icon ic ic-search"></span>
 							<span class="label">Buscar</span>
 						</a>
@@ -209,13 +171,18 @@ ga('send', 'pageview');
 
 											<!-- Left column -->
 						<div class="hp-block left-column grid12-3">
-																															<div class="item"><div class="logo-wrapper logo-wrapper--regular">
-			<h1 class="logo logo--regular"><strong>{{ config('app.name', 'Laravel') }}</strong><a href="{{route('home')}}" title="{{ config('app.name', 'Laravel') }}"><img src="{{asset('images/logo-db0a5b.png')}}" alt="{{ config('app.name', 'Laravel') }}"></a></h1>
+							<div class="item">
+								<div class="logo-wrapper logo-wrapper--regular">
+									<h1 class="logo logo--regular">
+										<strong>{{ config('app.name', 'Laravel') }}</strong>
+										<a href="{{ url('/') }}" title="{{ config('app.name', 'Laravel') }}"><img src="{{asset('images/logo-db0a5b.png')}}" alt="{{ config('app.name', 'Laravel') }}"></a>
+									</h1>
 	</div>
 </div>
-																					</div> <!-- end: left column -->
+			
+			</div> <!-- end: left column -->
 					
-					<!-- Central column -->
+											<!-- Central column -->
 <div class="hp-block central-column grid12-6">
 <div class="item">
 	<div id="search-wrapper-regular">
@@ -240,14 +207,14 @@ ga('send', 'pageview');
 </div>
 </div>
 </div> <!-- end: central column -->
-
-
 					
 											<!-- Right column -->
-						<div class="hp-block right-column grid12-3">
-<div class="item"><div id="user-menu-wrapper-regular">
-	<div id="user-menu" class="user-menu">
-<div id="mini-cart-wrapper-regular">
+<div class="hp-block right-column grid12-3">
+							
+<div class="item">
+	<div id="user-menu-wrapper-regular">
+		<div id="user-menu" class="user-menu">
+			<div id="mini-cart-wrapper-regular">
 				@if (count($cart))
  				<div id="mini-cart" class="mini-cart dropdown is-not-empty">
 					<a href="#header-cart" class="mini-cart-heading dropdown-heading cover skip-link skip-cart">
@@ -362,12 +329,10 @@ ga('send', 'pageview');
 		</ul>
 	</div>
 </div>	
-		
-		
-		
-	</div> <!-- end: user-menu -->
-</div></div>
-																					</div> <!-- end: right column -->
+</div> <!-- end: user-menu -->
+</div>
+</div>
+</div> <!-- end: right column -->
 										
 				</div> <!-- end: hp-blocks-holder -->
 
@@ -379,97 +344,114 @@ ga('send', 'pageview');
 	<div id="header-nav" class="nav-container skip-content sticky-container" style="margin-top: 0px;">
 		<div class="nav container clearer">
 			<div class="inner-container">
-	
+				<div class="mobnav-trigger-wrapper clearer" style="display: none;">
+					<a class="mobnav-trigger" href="#">
+						<span class="trigger-icon"><span class="line"></span><span class="line"></span><span class="line"></span></span>
+						<span>Menu</span>
+					</a>
+				</div>
+
+				<ul id="nav" class="nav-regular opt-fx-fade-inout opt-sb0">
+					<!--<li id="nav-holder1" class="nav-item level0 level-top nav-holder">
+						<div id="mini-cart" class="mini-cart dropdown is-empty">
+	    					<a href="#header-cart" class="mini-cart-heading dropdown-heading cover skip-link skip-cart">
+						        <span>
+						            <span class="icon ic ic-cart"></span>
+						            <span class="label" style="display:none;">Carrito</span>
+						            <span class="caret">&nbsp;</span>
+						        </span>
+	    					</a>
+	    
+	                		<div id="header-cart" class="mini-cart-content dropdown-content left-hand block block block-cart skip-content skip-content--style">
+	            				<div class="block-content-inner">
+	                                <div class="empty">No tiene artículos en su carrito de compras. </div>
+	            				</div>
+	        				</div>
+						</div>
+					</li>-->
+					<li id="nav-holder2" class="nav-item level0 level-top nav-holder"></li>
+					<li id="nav-holder3" class="nav-item level0 level-top nav-holder"></li>
+					<li class="nav-item nav-item--home level0 level-top active nav-item--homeicon">
+						<a class="level-top" href="{{ url('/') }}">
+							<span class="ic ic-home"></span>
+						</a>
+					</li>
 
 
-	
-	
-		<div class="mobnav-trigger-wrapper clearer" style="display: none;">
-
-			
-			<a class="mobnav-trigger" href="#">
-				<span class="trigger-icon"><span class="line"></span><span class="line"></span><span class="line"></span></span>
-				<span>Menu</span>
-			</a>
-			
-		</div>
-
-	
 
 
-	
-	<ul id="nav" class="nav-regular opt-fx-fade-inout opt-sb0">
 
-		<li id="nav-holder1" class="nav-item level0 level-top nav-holder"></li>
-		<li id="nav-holder2" class="nav-item level0 level-top nav-holder"></li>
-		<li id="nav-holder3" class="nav-item level0 level-top nav-holder"></li>
-	
-							<li class="nav-item nav-item--home level0 level-top active nav-item--homeicon">
-				<a class="level-top" href="{{route('home')}}"><span class="ic ic-home"></span></a>
-			</li>
-				
-							<li class="nav-item level0 nav-1 level-top first nav-item--parent mega parent">
-								<a href="{{route('lineas',['guitarras','all','all'])}}" class="level-top"><span>Guitarras</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+<li class="nav-item level0 nav-1 active current level-top first nav-item--parent mega parent item-active"><a href="{{route('lineas',['guitarras','all','all'])}}" class="level-top"><span>Guitarras</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
 <h5>Marcas</h5>
-</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-1-1 first"><a href="https://www.veerkamponline.com/guitarras/electricas.html"><span>Eléctricas</span></a></li><li class="nav-item level1 nav-1-2"><a href="https://www.veerkamponline.com/guitarras/electroacusticas.html"><span>Eléctroacusticas</span></a></li><li class="nav-item level1 nav-1-3"><a href="https://www.veerkamponline.com/guitarras/acusticas.html"><span>Acústicas</span></a></li><li class="nav-item level1 nav-1-4"><a href="https://www.veerkamponline.com/guitarras/ukuleles.html"><span>Ukuleles</span></a></li><li class="nav-item level1 nav-1-5"><a href="https://www.veerkamponline.com/guitarras/folcloricas.html"><span>Folclóricas</span></a></li><li class="nav-item level1 nav-1-6"><a href="https://www.veerkamponline.com/guitarras/encordaduras.html"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-1-7 last"><a href="https://www.veerkamponline.com/guitarras/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-1-1 first">
+	<a href="{{route('lineas',['guitarras','eléctricas','all'])}}"><span>Eléctricas</span></a></li><li class="nav-item level1 nav-1-2">
+		<a href="{{route('lineas',['guitarras','electroacústicas','all'])}}"><span>Eléctroacusticas</span></a></li><li class="nav-item level1 nav-1-3">
+		<a href="{{route('lineas',['guitarras','acústicas','all'])}}"><span>Acústicas</span></a></li><li class="nav-item level1 nav-1-4">
+			<a href="{{route('lineas',['guitarras','ukuleles','all'])}}"><span>Ukuleles</span></a></li><li class="nav-item level1 nav-1-5">
+				<a href="{{route('lineas',['guitarras','folclóricas','all'])}}"><span>Folclóricas</span></a></li><li class="nav-item level1 nav-1-6">
+					<a href="{{route('lineas',['guitarras','encordaduras','all'])}}"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-1-7 last">
+						<a href="{{route('lineas',['guitarras','accesorios','all'])}}"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=71">ibanez</a>
+		<a href="{{route('lineas',['guitarras','all','ibanez'])}}">ibanez</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=33">sterling</a>
+		<a href="{{route('lineas',['guitarras','all','cort'])}}">cort</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=17">cort</a>
+		<a href="{{route('lineas',['guitarras','all','musicman'])}}">musicman</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=58">musicman</a>
+		<a href="{{route('lineas',['guitarras','all','sevillana'])}}">la sevillana</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=1680">la sevillana</a>
+		<a href="{{route('lineas',['guitarras','all','caraya'])}}">caraya</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=87">caraya</a>
+		<a href="{{route('lineas',['guitarras','all','valenciana'])}}">valenciana</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=196">valenciana</a>
+		<a href="{{route('lineas',['guitarras','all','hofner'])}}">hofner</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/guitarras.html?manufacturer=73">hofner</a>
+		<a href="{{route('lineas',['guitarras','all','strunal'])}}">strunal</a>
 	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-2 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/bajos.html" class="level-top"><span>Bajos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-2 level-top nav-item--parent mega parent"><a href="{{route('lineas',['bajos','all','all'])}}" class="level-top"><span>Bajos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
 <h5>Marcas</h5>
-</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-2-1 first"><a href="https://www.veerkamponline.com/bajos/bajos-electricos.html"><span>Eléctricos</span></a></li><li class="nav-item level1 nav-2-2"><a href="https://www.veerkamponline.com/bajos/acusticos.html"><span>Acústicos</span></a></li><li class="nav-item level1 nav-2-3"><a href="https://www.veerkamponline.com/bajos/encordaduras.html"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-2-4 last"><a href="https://www.veerkamponline.com/bajos/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
+</div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-2-1 first">
+	<a href="{{route('lineas',['bajos','eléctricos','all'])}}"><span>Eléctricos</span></a></li><li class="nav-item level1 nav-2-2"><a href="{{route('lineas',['bajos','acústicos','all'])}}"><span>Acústicos</span></a></li><li class="nav-item level1 nav-2-3">
+		<a href="{{route('lineas',['bajos','encordaduras','all'])}}"><span>Encordaduras</span></a></li><li class="nav-item level1 nav-2-4 last">
+			<a href="{{route('lineas',['bajos','accesorios','all'])}}"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=71">ibanez</a>
+		<a href="{{route('lineas',['bajos','all','ibanez'])}}">ibanez</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=73">hofner</a>
+		<a href="{{route('lineas',['bajos','all','hofner'])}}">hofner</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=17">cort</a>
+		<a href="{{route('lineas',['bajos','all','cort'])}}">cort</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=31">sub</a>
+		<a href="{{route('lineas',['bajos','all','sub'])}}">sub</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=58">musicman</a>
+		<a href="{{route('lineas',['bajos','all','musicman'])}}">musicman</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=79">ernie ball</a>
+		<a href="{{route('lineas',['bajos','all','ernie ball'])}}">ernie ball</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=67">la bella</a>
+		<a href="{{route('lineas',['bajos','all','la bella'])}}">la bella</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/bajos.html?manufacturer=1834">d'addario</a>
+		<a href="{{route('lineas',['bajos','all','daddario'])}}">d'addario</a>
 	</li>
  
 </ul>
@@ -492,9 +474,6 @@ ga('send', 'pageview');
 		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=58">musicman</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=1696">krk systems</a>
-	</li>
-	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=275">boss</a>
 	</li>
 	<li class="nav-item">
@@ -502,6 +481,9 @@ ga('send', 'pageview');
 	</li>
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=82">dunlop</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/amplificadores-efectos.html?manufacturer=79">ernie ball</a>
 	</li>
  
 </ul>
@@ -513,9 +495,6 @@ ga('send', 'pageview');
 </div></div><div class="nav-block--center grid12-6"><ul class="level0 nav-submenu nav-submenu--mega dd-itemgrid dd-itemgrid-1col"><li class="nav-item level1 nav-4-1 first"><a href="https://www.veerkamponline.com/baterias/baterias.html"><span>Baterias</span></a></li><li class="nav-item level1 nav-4-2"><a href="https://www.veerkamponline.com/baterias/platillos.html"><span>Platillos</span></a></li><li class="nav-item level1 nav-4-3"><a href="https://www.veerkamponline.com/baterias/tarolas.html"><span>Tarolas</span></a></li><li class="nav-item level1 nav-4-4"><a href="https://www.veerkamponline.com/baterias/hardware.html"><span>Hardware</span></a></li><li class="nav-item level1 nav-4-5"><a href="https://www.veerkamponline.com/baterias/pedales.html"><span>Pedales</span></a></li><li class="nav-item level1 nav-4-6"><a href="https://www.veerkamponline.com/baterias/parches.html"><span>Parches</span></a></li><li class="nav-item level1 nav-4-7"><a href="https://www.veerkamponline.com/baterias/baquetas.html"><span>Baquetas</span></a></li><li class="nav-item level1 nav-4-8 last"><a href="https://www.veerkamponline.com/baterias/accesorios.html"><span>Accesorios</span></a></li></ul></div><div class="nav-block nav-block--right std grid12-6"><ul class="nav-regular nav-submenu--mega dd-itemgrid-1col">
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=29">tama</a>
-	</li>
-	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=1688">gretsch</a>
 	</li>
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=50">powerbeat</a>
@@ -530,14 +509,17 @@ ga('send', 'pageview');
 		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=81">el cometa</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=1717">sonor</a>
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=60">magestic</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=60">magestic</a>
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=77">gibraltar</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/baterias.html?manufacturer=1670">vic firth</a>
 	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-5 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/percusiones.html" class="level-top"><span>Percusiones</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-5 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/percusiones.html" class="level-top"><span>Percusiones</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 606.417px; top: 20px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
@@ -550,13 +532,16 @@ ga('send', 'pageview');
 		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=484">latin percussion</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=44">remo</a>
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=26">toca</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=50">powerbeat</a>
 	</li>
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=1644">meinl</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=26">toca</a>
+		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=44">remo</a>
 	</li>
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=81">el cometa</a>
@@ -564,12 +549,9 @@ ga('send', 'pageview');
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=86">cpk</a>
 	</li>
-	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/percusiones.html?manufacturer=48">promark</a>
-	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-6 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/clasicos-orquestas.html" class="level-top"><span>Clásicos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-6 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/clasicos-orquestas.html" class="level-top"><span>Clásicos</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 722.517px; top: 20px; display: none;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
@@ -601,7 +583,7 @@ ga('send', 'pageview');
 	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-7 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/alientos.html" class="level-top"><span>Alientos </span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-7 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/alientos.html" class="level-top"><span>Alientos </span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 813.633px; top: 20px; display: none;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
@@ -633,7 +615,7 @@ ga('send', 'pageview');
 	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-8 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/dj-s.html" class="level-top"><span>Electrónica</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 906.25px; top: 20px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-8 level-top nav-item--parent mega parent"><a href="https://www.veerkamponline.com/dj-s.html" class="level-top"><span>Electrónica</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 906.25px; top: 20px; display: none;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
@@ -649,13 +631,7 @@ ga('send', 'pageview');
 		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1564">allen &amp; heath</a>
 	</li>
 	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1563">phonic</a>
-	</li>
-	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=45">reloop</a>
-	</li>
-	<li class="nav-item">
-		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1696">krk systems</a>
 	</li>
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1630">roland</a>
@@ -663,9 +639,15 @@ ga('send', 'pageview');
 	<li class="nav-item">
 		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1562">casio</a>
 	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1835">hercules</a>
+	</li>
+	<li class="nav-item">
+		<a href="https://www.veerkamponline.com/dj-s.html?manufacturer=1731">bobino</a>
+	</li>
  
 </ul>
-</div></div></div></li><li class="nav-item level0 nav-9 level-top last nav-item--parent mega nav-item--only-blocks parent"><a href="https://www.veerkamponline.com/libros.html" class="level-top"><span>Libros</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px; left: 982.5px; top: 20px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
+</div></div></div></li><li class="nav-item level0 nav-9 level-top last nav-item--parent mega nav-item--only-blocks parent"><a href="https://www.veerkamponline.com/libros.html" class="level-top"><span>Libros</span><span class="caret">&nbsp;</span></a><span class="opener"></span><div class="nav-panel--dropdown nav-panel" style="width: 280px;"><div class="nav-panel-inner"><div class="nav-block nav-block--top std grid-full"><div class="grid12-6 categorias">
 <h5>Categorías</h5>
 </div>
 <div class="grid12-6 marcas">
@@ -691,11 +673,16 @@ ga('send', 'pageview');
 	</li>
  
 </ul>
-</div></div></div></li>			
-						
-						
-	</ul>
-	<div class="nav-border-bottom"></div>
+</div></div></div></li>
+
+
+					
+					
+
+
+									
+				</ul>
+		<div class="nav-border-bottom"></div>
 
 
 
@@ -938,334 +925,12 @@ ga('send', 'pageview');
 
 </div> <!-- end: inner-container -->
 		</div> <!-- end: nav -->
-	</div> <!-- end: nav-container -->			
-
-
-
-	
-	</div> <!-- end: header-container3 -->
-</div> <!-- end: header-container2 -->
-</div> <!-- end: header-container -->
-
-
-<script type="text/javascript">
-//<![CDATA[
-
-		
-		var SmartHeader = {
-
-			mobileHeaderThreshold : 770
-			, rootContainer : jQuery('.header-container')
-
-			, init : function()
-			{
-				enquire.register('(max-width: ' + (SmartHeader.mobileHeaderThreshold - 1) + 'px)', {
-					match: SmartHeader.moveElementsToMobilePosition,
-					unmatch: SmartHeader.moveElementsToRegularPosition
-				});
-			}
-
-			, activateMobileHeader : function()
-			{
-				SmartHeader.rootContainer.addClass('header-mobile').removeClass('header-regular');
-			}
-
-			, activateRegularHeader : function()
-			{
-				SmartHeader.rootContainer.addClass('header-regular').removeClass('header-mobile');
-			}
-
-			, moveElementsToMobilePosition : function()
-			{
-				SmartHeader.activateMobileHeader();
-
-				//Move cart
-				jQuery('#mini-cart-wrapper-mobile').prepend(jQuery('#mini-cart'));
-
-			
-			
-			
-				//Reset active state
-				jQuery('.skip-active').removeClass('skip-active');
-				
-				//Disable dropdowns
-				jQuery('#mini-cart').removeClass('dropdown');
-				jQuery('#mini-compare').removeClass('dropdown');
-
-				//Clean up after dropdowns: reset the "display" property
-				jQuery('#header-cart').css('display', '');
-				jQuery('#header-compare').css('display', '');
-
-			}
-
-			, moveElementsToRegularPosition : function()
-			{
-				SmartHeader.activateRegularHeader();
-
-				//Move cart
-				jQuery('#mini-cart-wrapper-regular').prepend(jQuery('#mini-cart'));
-
-			
-			
-			
-				//Reset active state
-				jQuery('.skip-active').removeClass('skip-active');
-
-				//Enable dropdowns
-				jQuery('#mini-cart').addClass('dropdown');
-				jQuery('#mini-compare').addClass('dropdown');
-			}
-
-		}; //end: SmartHeader
-
-		//Important: mobile header code must be executed before sticky header code
-		SmartHeader.init();
-
-		jQuery(function($) {
-
-			//Skip Links
-			var skipContents = $('.skip-content');
-			var skipLinks = $('.skip-link');
-
-			skipLinks.on('click', function (e) {
-				e.preventDefault();
-
-				var self = $(this);
-				var target = self.attr('href');
-
-				//Get target element
-				var elem = $(target);
-
-				//Check if stub is open
-				var isSkipContentOpen = elem.hasClass('skip-active') ? 1 : 0;
-
-				//Hide all stubs
-				skipLinks.removeClass('skip-active');
-				skipContents.removeClass('skip-active');
-
-				//Toggle stubs
-				if (isSkipContentOpen) {
-					self.removeClass('skip-active');
-				} else {
-					self.addClass('skip-active');
-					elem.addClass('skip-active');
-				}
-			});
-
-		}); //end: on document ready
-
-	
-
-
-		
-		jQuery(function($) {
-
-			var StickyHeader = {
-
-				stickyThreshold : 960 
-				, isSticky : false
-				, isSuspended : false
-				, headerContainer : $('.header-container')
-				, stickyContainer : $('.sticky-container')	//.nav-container
-				, stickyContainerOffsetTop : 55 //Position of the bottom edge of the sticky container relative to the viewport
-				, requiredRecalculation : false //Flag: required recalculation of the position of the bottom edge of the sticky container
-
-				, calculateStickyContainerOffsetTop : function()
-				{
-					//Calculate the position of the bottom edge of the sticky container relative to the viewport
-					StickyHeader.stickyContainerOffsetTop = 
-						StickyHeader.stickyContainer.offset().top + StickyHeader.stickyContainer.outerHeight();
-
-					//Important: disable flag
-					StickyHeader.requiredRecalculation = false;
-				}
-
-				, init : function()
-				{
-					StickyHeader.hookToActivatedDeactivated(); //Important: call before activateSticky is called
-					StickyHeader.calculateStickyContainerOffsetTop();
-					StickyHeader.applySticky();
-					StickyHeader.hookToScroll();
-					StickyHeader.hookToResize();
-
-					if (StickyHeader.stickyThreshold > 0)
-					{
-						enquire.register('(max-width: ' + (StickyHeader.stickyThreshold - 1) + 'px)', {
-							match: StickyHeader.suspendSticky,
-							unmatch: StickyHeader.unsuspendSticky
-						});
-					}
-				}
-
-				, applySticky : function()
-				{
-					if (StickyHeader.isSuspended) return;
-
-					//If recalculation required
-					if (StickyHeader.requiredRecalculation)
-					{
-						//Important: recalculate only when header is not sticky
-						if (!StickyHeader.isSticky)
-						{
-							StickyHeader.calculateStickyContainerOffsetTop();
-						}
-					}
-
-					var viewportOffsetTop = $(window).scrollTop();
-					if (viewportOffsetTop > StickyHeader.stickyContainerOffsetTop)
-					{
-						if (!StickyHeader.isSticky)
-						{
-							StickyHeader.activateSticky();
-						}
-					}
-					else
-					{
-						if (StickyHeader.isSticky)
-						{
-							StickyHeader.deactivateSticky();
-						}
-					}
-				}
-
-				, activateSticky : function()
-				{
-					var stickyContainerHeight = StickyHeader.stickyContainer.outerHeight();
-					var originalHeaderHeight = StickyHeader.headerContainer.css('height');
-
-					//Compensate the change of the header height after the sticky container was removed from its normal position
-					StickyHeader.headerContainer.css('height', originalHeaderHeight);
-
-					//Trigger even just before making the header sticky
-					$(document).trigger("sticky-header-before-activated");
-
-					//Make the header sticky
-					StickyHeader.headerContainer.addClass('sticky-header');
-					StickyHeader.isSticky = true;
-
-					//Effect
-					StickyHeader.stickyContainer.css('margin-top', '-' + stickyContainerHeight + 'px').animate({'margin-top': '0'}, 200, 'easeOutCubic');
-					//StickyHeader.stickyContainer.css('opacity', '0').animate({'opacity': '1'}, 300, 'easeOutCubic');
-				}
-
-				, deactivateSticky : function()
-				{
-					//Remove the compensation of the header height change
-					StickyHeader.headerContainer.css('height', '');
-
-					StickyHeader.headerContainer.removeClass('sticky-header');
-					StickyHeader.isSticky = false;
-
-					$(document).trigger("sticky-header-deactivated");
-				}
-
-				, suspendSticky : function()
-				{
-					StickyHeader.isSuspended = true;
-
-					//Deactivate sticky header.
-					//Important: call method only when sticky header is actually active.
-					if (StickyHeader.isSticky)
-					{
-						StickyHeader.deactivateSticky();
-					}
-				}
-
-				, unsuspendSticky : function()
-				{
-					StickyHeader.isSuspended = false;
-
-					//Activate sticky header.
-					//Important: call applySticky instead of activateSticky to check if activation is needed.
-					StickyHeader.applySticky();
-				}
-
-				, hookToScroll : function()
-				{
-					$(window).on("scroll", StickyHeader.applySticky);
-				}
-
-				, hookToScrollDeferred : function()
-				{
-					var windowScrollTimeout;
-					$(window).on("scroll", function() {
-						clearTimeout(windowScrollTimeout);
-						windowScrollTimeout = setTimeout(function() {
-							StickyHeader.applySticky();
-						}, 50);
-					});
-				}
-
-				, hookToResize : function()
-				{
-					$(window).on('themeResize', function(e) {
-
-						//Require recalculation
-						StickyHeader.requiredRecalculation = true;
-
-						//Remove the compensation of the header height change
-						StickyHeader.headerContainer.css('height', '');
-					});
-				}
-
-				, hookToActivatedDeactivated : function()
-				{
-					//Move elements to sticky header
-					$(document).on('sticky-header-before-activated', function(e, data) {
-
-						//Move mini cart to sticky header but only if mini cart is NOT yet inside the holder
-						//(if parent of parent doesn't have class "nav-holder").
-						if (jQuery('#mini-cart').parent().parent().hasClass('nav-holder') === false)
-						{
-							jQuery('#nav-holder1').prepend(jQuery('#mini-cart'));
-						}
-
-						//Move mini compare to sticky header but only if mini compare is NOT yet inside the holder
-						//(if parent of parent doesn't have class "nav-holder").
-						if (jQuery('#mini-compare').parent().parent().hasClass('nav-holder') === false)
-						{
-							jQuery('#nav-holder2').prepend(jQuery('#mini-compare'));
-						}
-
-					}); //end: on event
-
-					//Move elements from sticky header to normal position
-					$(document).on('sticky-header-deactivated', function(e, data) {
-
-						//Move mini cart back to the regular container but only if mini cart is directly inside the holder
-						if (jQuery('#mini-cart').parent().hasClass('nav-holder'))
-						{
-							jQuery('#mini-cart-wrapper-regular').prepend(jQuery('#mini-cart'));
-						}
-
-						//Move mini compare back to the regular container but only if mini compare is directly inside the holder
-						if (jQuery('#mini-compare').parent().hasClass('nav-holder'))
-						{
-							jQuery('#mini-compare-wrapper-regular').prepend(jQuery('#mini-compare'));
-						}
-
-					}); //end: on event
-				}
-
-			}; //end: StickyHeader
-
-			StickyHeader.init();
-
-		}); //end: on document ready
-
-	
-//]]>
-</script>
-
+	</div> 
+	<!--+++++++++++++++++++++++++++++++++ end: nav-container +++++++++++++++++++++++++++++++++++++++++++++++-->			
 
 @yield('content')
 
-
-
-
-
-
-
+<!--++++++++++++++++++++++++++++++++++++++++++++ footer +++++++++++++++++++++++++++++++++++++++++++++++-->
 <div class="footer-container">
 <div class="footer-container2">
 <div class="footer-container3">		

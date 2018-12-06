@@ -7,62 +7,32 @@ Route::get('/home', [
 	'uses' => 'indexController@index'
 ]);
 
-Route::get('/preguntas-frecuentes',['as' => 'preguntas',function(){
-	return view('documentacion.preguntas');
-}]);
-
-Route::get('/about',['as' => 'about', function(){
-	return view('documentacion.about');
-}]);
-
-Route::get('/terminos-uso',['as' => 'terminos-uso', function(){
-	return view('documentacion.terminos_uso');
-}]);
-
-Route::get('/terminos-condiciones',['as' => 'terminos-condiciones', function(){
-	return view('documentacion.terminos_condicion');
-}]);
-
-Route::get('/forma-pago',['as' => 'forma_pago', function(){
-	return view('documentacion.formas_pago');
-}]);
-
-Route::get('/aviso-privacidad',['as' => 'aviso_privacidad', function(){
-	return view('documentacion.aviso_privacidad');
-}]);
-
-Route::get('/terminos-condiciones',['as' => 'terminos-condiciones', function(){
-	return view('documentacion.terminos_condicion');
-}]);
-
-Route::get('/politicas',['as' => 'politicas', function(){
-	return view('documentacion.politicas');
-}]);
-
-Route::get('/terminos-condiciones',['as' => 'terminos-condiciones', function(){
-	return view('documentacion.terminos_condicion');
-}]);
-
-Route::get('/forma-compra',['as' => 'forma_compra', function(){
-	return view('documentacion.forma_compra');
-}]);
+Route::get('/{documentacion}','documentacionController@getDocumento');
 
 Route::get('/contacto',['as' => 'contacto', function(){
 	return view('contacto');
 }]);
 
 
+Route::get('/account/register', [
+	'as' => 'account-register',
+	'uses' => 'cuentasController@showRegister'
+]);
+
+Route::get('/account/login', [
+	'as' => 'account-login',
+	'uses' => 'cuentasController@showLogin'
+]);
 
 
 
 
-
-Route::get('{linea}/{categoria}/{marca}', [
+Route::get('/{linea}/{categoria}/{marca}', [
 	'as' => 'lineas',
 	'uses' => 'lineasResourceController@categoriasPorLinea'
 ]);
 
-Route::get('busqueda', [
+Route::get('/resultados/busqueda', [
 	'as' => 'busqueda',
 	'uses' => 'lineasResourceController@getSearch'
 ]);
